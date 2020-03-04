@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BA849E9-BB29-4834-A99C-9F554BC8F9ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SharkSmart</RootNamespace>
+    <AssemblyName>SharkSmart</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EVTechnology">
+      <HintPath>..\Dll\EVTechnology.dll</HintPath>
+    </Reference>
+    <Reference Include="HIDAPI">
+      <HintPath>..\Dll\HIDAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="MouseKeyboardActivityMonitor">
+      <HintPath>..\Dll\MouseKeyboardActivityMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="NetDimension.NanUI, Version=0.6.3239.2066, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetDimension.NanUI.0.6.3239.2\lib\NetDimension.NanUI.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SharkTranslator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\SharkTranslator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAddModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddModule.Designer.cs">
+      <DependentUpon>FrmAddModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddPlan.Designer.cs">
+      <DependentUpon>FrmAddPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddResources.Designer.cs">
+      <DependentUpon>FrmAddResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddUnit.Designer.cs">
+      <DependentUpon>FrmAddUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmData.Designer.cs">
+      <DependentUpon>FrmData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddView.Designer.cs">
+      <DependentUpon>FrmAddView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDebug\CtlAdvancedDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDebug\CtlAdvancedDebug.Designer.cs">
+      <DependentUpon>CtlAdvancedDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDeviceItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDeviceItem.Designer.cs">
+      <DependentUpon>CtlDeviceItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDebug.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDebug.Designer.cs">
+      <DependentUpon>CtlDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDebugOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDebugOutput.Designer.cs">
+      <DependentUpon>CtlDebugOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDebugSerialPort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmDebug\CtlDebugSerialPort.Designer.cs">
+      <DependentUpon>CtlDebugSerialPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDebug\FrmDeviceConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDebug\FrmDeviceConfig.Designer.cs">
+      <DependentUpon>FrmDeviceConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditor.Designer.cs">
+      <DependentUpon>FrmEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoader.Designer.cs">
+      <DependentUpon>FrmLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResources.Designer.cs">
+      <DependentUpon>FrmResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStartPage.Designer.cs">
+      <DependentUpon>FrmStartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewPage.Designer.cs">
+      <DependentUpon>FrmViewPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\BlockConvertHelper.cs" />
+    <Compile Include="Tools\CommandHelper.cs" />
+    <Compile Include="Tools\CompileHelper.cs" />
+    <Compile Include="Tools\DeviceItem.cs" />
+    <Compile Include="Tools\DeviceManager.cs" />
+    <Compile Include="Tools\Engine.cs" />
+    <Compile Include="Tools\SharkDevice.cs" />
+    <EmbeddedResource Include="FrmAddModule.resx">
+      <DependentUpon>FrmAddModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddPlan.resx">
+      <DependentUpon>FrmAddPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddResources.resx">
+      <DependentUpon>FrmAddResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddUnit.resx">
+      <DependentUpon>FrmAddUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmData.resx">
+      <DependentUpon>FrmData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddView.resx">
+      <DependentUpon>FrmAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDebug\CtlAdvancedDebug.resx">
+      <DependentUpon>CtlAdvancedDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDebug\CtlDeviceItem.resx">
+      <DependentUpon>CtlDeviceItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDebug\CtlDebug.resx">
+      <DependentUpon>CtlDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDebug\CtlDebugOutput.resx">
+      <DependentUpon>CtlDebugOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDebug\CtlDebugSerialPort.resx">
+      <DependentUpon>CtlDebugSerialPort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDebug\FrmDeviceConfig.resx">
+      <DependentUpon>FrmDeviceConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditor.resx">
+      <DependentUpon>FrmEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoader.resx">
+      <DependentUpon>FrmLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResources.resx">
+      <DependentUpon>FrmResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStartPage.resx">
+      <DependentUpon>FrmStartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewPage.resx">
+      <DependentUpon>FrmViewPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EVClassLib\EVClassLib.csproj">
+      <Project>{ddfcab45-1636-41e7-a558-89be6b908d62}</Project>
+      <Name>EVClassLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHARK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cached.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jihua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mokuai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qingchu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuaxin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhongxinzhihang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\touming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\配置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\音频.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\editor\editor.html" />
+    <Content Include="bin\Debug\editor\vs\base\worker\workerMain.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\abap\abap.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\apex\apex.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\azcli\azcli.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\bat\bat.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\clojure\clojure.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\coffee\coffee.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\cpp\cpp.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\csharp\csharp.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\csp\csp.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\css\css.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\dockerfile\dockerfile.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\fsharp\fsharp.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\go\go.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\graphql\graphql.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\handlebars\handlebars.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\html\html.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\ini\ini.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\javascript\javascript.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\java\java.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\kotlin\kotlin.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\less\less.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\lua\lua.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\markdown\markdown.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\msdax\msdax.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\mysql\mysql.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\objective-c\objective-c.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\pascaligo\pascaligo.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\pascal\pascal.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\perl\perl.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\pgsql\pgsql.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\php\php.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\postiats\postiats.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\powerquery\powerquery.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\powershell\powershell.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\pug\pug.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\python\python.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\razor\razor.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\redis\redis.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\redshift\redshift.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\ruby\ruby.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\rust\rust.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\r\r.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\sb\sb.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\scheme\scheme.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\scss\scss.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\shell\shell.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\solidity\solidity.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\sophia\sophia.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\sql\sql.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\st\st.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\swift\swift.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\tcl\tcl.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\twig\twig.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\typescript\typescript.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\vb\vb.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\xml\xml.js" />
+    <Content Include="bin\Debug\editor\vs\basic-languages\yaml\yaml.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.css" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.de.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.es.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.fr.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.it.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.ja.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.ko.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.ru.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.zh-cn.js" />
+    <Content Include="bin\Debug\editor\vs\editor\editor.main.nls.zh-tw.js" />
+    <Content Include="bin\Debug\editor\vs\jquery-3.4.1.min.js" />
+    <Content Include="bin\Debug\editor\vs\language\css\cssMode.js" />
+    <Content Include="bin\Debug\editor\vs\language\css\cssWorker.js" />
+    <Content Include="bin\Debug\editor\vs\language\html\htmlMode.js" />
+    <Content Include="bin\Debug\editor\vs\language\html\htmlWorker.js" />
+    <Content Include="bin\Debug\editor\vs\language\json\jsonMode.js" />
+    <Content Include="bin\Debug\editor\vs\language\json\jsonWorker.js" />
+    <Content Include="bin\Debug\editor\vs\language\typescript\tsMode.js" />
+    <Content Include="bin\Debug\editor\vs\language\typescript\tsWorker.js" />
+    <Content Include="bin\Debug\editor\vs\loader.js" />
+    <None Include="Resources\data.png" />
+    <None Include="Resources\wenjiantianjia.png" />
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NetDimension.NanUI.Cef3239.3.3239.1723.0\build\NetDimension.NanUI.Cef3239.targets" Condition="Exists('..\packages\NetDimension.NanUI.Cef3239.3.3239.1723.0\build\NetDimension.NanUI.Cef3239.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NetDimension.NanUI.Cef3239.3.3239.1723.0\build\NetDimension.NanUI.Cef3239.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NetDimension.NanUI.Cef3239.3.3239.1723.0\build\NetDimension.NanUI.Cef3239.targets'))" />
+  </Target>
+</Project>

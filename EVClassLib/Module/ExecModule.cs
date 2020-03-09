@@ -135,9 +135,21 @@ namespace EVClassLib
                         BaseEvent be = tmps.Find(p => p.Name == ctrl.Name)?.Event;
                         if (be != null) ctrl.Event = be;
                         page.Controls.Add(ctrl);
-
                         AddControlRes(block);
                     }
+                    var cur = datas[0];
+                    string filename = cur.Name;
+                    string respath = Path.GetDirectoryName(WorkPath) + "\\Resources\\" + filename + ".raw";
+                    Resource res = Resources.Find(p => p.Name == filename);
+                    if (res == null)
+                    {
+                        res = new Resource();
+                        res.Name = filename;
+                        res.Type = ResType.File;
+                        Resources.Add(res);
+                    }
+                    res.Path = "\\Resources\\" + filename + ".raw";
+                    cur.CreateNoFontFile(respath);
                 }
             }
         }

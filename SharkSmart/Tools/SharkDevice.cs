@@ -75,6 +75,11 @@ namespace SharkSmart
 				newpath = driveinfo.DriveLetter + "\\";
 				if (Directory.Exists(driveinfo.DriveLetter))
 				{
+					if (Directory.Exists(newpath + "resources"))
+					{
+						FileHelper.DeleteFolder(newpath + "resources");
+						Directory.CreateDirectory(newpath + "resources");
+					}
 					FileHelper.CopyDirectory(sourcepath, newpath);
 				}
 				if (File.Exists(newpath+"app.bin"))

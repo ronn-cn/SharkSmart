@@ -318,6 +318,10 @@ namespace SharkSmart
                 Time = DateTime.Now
             };
             tool.UpdateProjectRecord(record);
+            foreach (var mod in sp.ModuleDatas)
+            {
+                mod.WorkPath = sp.WorkPath + "\\" + mod.Name + "\\" + mod.Name + ".mt";
+            }
             this.Hide();
             FrmMain frm = new FrmMain();
             frm.Show();

@@ -104,7 +104,7 @@ EV_PAGE* CreatePageFormPath(uint16_t width, uint16_t height, uint32_t offset, ch
 }
 
 
-EV_CONTROL* CreateControl(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t offset, EV_PAGE* parent, uint16_t* pdata, uint16_t *ptext, uint16_t plength, uint8_t fontsize)
+EV_CONTROL* CreateControl(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t offset, EV_PAGE* parent, uint16_t* pdata, uint16_t *ptext, uint16_t plength, uint8_t fontsize, uint16_t fontcolor)
 {
     EV_CONTROL* _ctrl_private = (EV_CONTROL *)mymalloc(SRAMEX, sizeof(EV_CONTROL));
     _ctrl_private->ParentID = parent->ID;
@@ -116,7 +116,7 @@ EV_CONTROL* CreateControl(uint16_t x, uint16_t y, uint16_t width, uint16_t heigh
     _ctrl_private->Offset = offset;
     _ctrl_private->BackGroundImage = pdata;
     _ctrl_private->BackGroundColor = TRANSPARENT;
-    _ctrl_private->ForeColor = BLACK;
+    _ctrl_private->ForeColor = fontcolor;
     _ctrl_private->FontSize = fontsize;
     _ctrl_private->Text = ptext;
     _ctrl_private->TextLength = plength;

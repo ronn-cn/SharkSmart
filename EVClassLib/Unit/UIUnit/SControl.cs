@@ -23,7 +23,7 @@ namespace EVClassLib
             r = color.R;
             g = color.G;
             b = color.B;
-            return Covering(a) + Covering(b) + Covering(g) + Covering(r);
+            return Covering(a) + Covering(r) + Covering(g) + Covering(b);
         }
 
         /// <summary>

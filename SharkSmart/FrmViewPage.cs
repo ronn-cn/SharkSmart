@@ -57,27 +57,6 @@ namespace SharkSmart
 
         private void TsbSave_Click(object sender, EventArgs e)
         {
-            Save();
-        }
-
-        private void Save()
-        {
-            deg.Save();
-            foreach (var cur in deg.Datas)
-            {
-                string filename = cur.Name;
-                string path = Path.GetDirectoryName(Mod.WorkPath) + "\\Resources\\" + filename + ".raw";
-                Resource res = ((ExecModule)Mod).Resources.Find(p => p.Name == filename);
-                if (res == null)
-                {
-                    res = new Resource();
-                    res.Name = filename;
-                    res.Type = ResType.File;
-                    ((ExecModule)Mod).Resources.Add(res);
-                }
-                res.Path = "\\Resources\\" + filename + ".raw";
-                cur.CreateNoFontFile(path);
-            }
             Mod.Save();
         }
 
@@ -146,6 +125,7 @@ namespace SharkSmart
                     File.WriteAllText(path, code);
                 }
             }
+            Mod.Save();
             Main.SkipCodeView(path);
         }
 
@@ -154,7 +134,7 @@ namespace SharkSmart
             bool flag = base.ProcessCmdKey(ref msg, keyData);
             if (keyData == (Keys.S | Keys.Control))
             {
-                Save();
+                Mod.Save();
             }
             return flag;
         }

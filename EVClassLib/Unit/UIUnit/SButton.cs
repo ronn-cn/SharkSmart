@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EVTechnology.Common.Helper;
+using System;
 
 namespace EVClassLib
 {
@@ -18,8 +19,17 @@ namespace EVClassLib
             string text = "";
             if (!string.IsNullOrEmpty(this.ParentName))
             {
-                text = String.Format("{0} = CreateControl({1}, {2}, {3}, {4}, {5}, {6}, NULL, {7}, {8}, 16);\r",
-                    Name, Location.X, Location.Y, Size.Width, Size.Height, 0, ParentName, Name + "_text", Text.Length + 1);
+                string tmp;
+                if (string.IsNullOrEmpty(Text))
+                {
+                    tmp = "NULL";
+                }
+                else
+                    tmp = Name + "_text";
+
+                text = String.Format("{0} = CreateControl({1}, {2}, {3}, {4}, {5}, {6}, NULL, {7}, {8}, {9}, 0x{10});\r",
+                    Name, Location.X, Location.Y, Size.Width, Size.Height, 0, ParentName, tmp, Text.Length, FontSize, 
+                    DrawHelper.RGB32toRGB16(TextColor));
             }
             return text;
         }

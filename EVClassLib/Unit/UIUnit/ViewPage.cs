@@ -1,6 +1,8 @@
 ﻿using EVTechnology.Common.Helper;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 
 namespace EVClassLib
@@ -25,6 +27,7 @@ namespace EVClassLib
             Controls.Find(p => p.Name == Name + "_" + CtlName).Event = et;
         }
 
+        
         public virtual string TransformToClang_forC()
         {
             string defineCode = "EV_PAGE* " + Name + ";\r";
@@ -38,7 +41,7 @@ namespace EVClassLib
                     if (!string.IsNullOrEmpty(((SButton)ctl).Text))
                     {
                         unicodeCode += "uint16_t " + ctl.Name + "_text[] = {" +
-                            StringHelper.StringToUnicode(((SButton)ctl).Text) + "};";
+                            StringHelper.StringToUnicode(((SButton)ctl).Text) + "};\r";
                     }
                     if (!string.IsNullOrEmpty(ctl.Event.Clicked))
                     {
@@ -86,7 +89,7 @@ void Create{0}()
                 if (ctrl.Name != this.Name)
                 {
                     text += "extern EV_CONTROL* " + ctrl.Name + ";\r\n";
-                    if (!string.IsNullOrEmpty(ctrl.Event.Clicked))
+                    if (!string.IsNullOrEmpty(ctrl.Event?.Clicked))
                         text += "extern void DisplayUnit_" + ctrl.Event.Clicked + "();\r";
                     i++;
                 }

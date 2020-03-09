@@ -42,9 +42,9 @@ namespace SharkSmart
             {
                 int angle = 0;
                 if (rb0.Checked) angle = 0;
-                else if (rb1.Checked) angle = 90;
-                else if (rb2.Checked) angle = 180;
-                else if (rb3.Checked) angle = 270;
+                else if (rb1.Checked) angle = 1;
+                else if (rb2.Checked) angle = 2;
+                else if (rb3.Checked) angle = 3;
                 Unit = new UIUnit(tbName.Text, (int)nudLight.Value, angle, new Size((int)nudWidth.Value, (int)nudHight.Value));
             }
             DialogResult = DialogResult.OK;

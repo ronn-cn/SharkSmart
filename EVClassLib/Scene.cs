@@ -88,6 +88,7 @@ namespace EVClassLib
         {
             ModuleData data = ModuleDatas.Find(p => p.ID == id);
             Module mod = FileHelper.AnalysisSerializeFile<Module>(data.WorkPath, FileType.BinaryFile);
+            mod.WorkPath = data.WorkPath;
             return mod;
         }
 
@@ -118,7 +119,7 @@ namespace EVClassLib
 
         public string Name;
 
-        public string WorkPath;
+        public string WorkPath { set; get; }
 
         public ModuleData()
         {

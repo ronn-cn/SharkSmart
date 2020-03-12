@@ -1,14 +1,8 @@
 ﻿using EVClassLib;
 using EVTechnology.Common.Helper;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SharkSmart
@@ -17,7 +11,6 @@ namespace SharkSmart
     {
         public ExecModule Mod { set; get; }
 
-        private ResType type = ResType.Image;
         private string FoldPath { set; get; } = "";
         public FrmResources()
         {
@@ -58,10 +51,10 @@ namespace SharkSmart
             this.lvData.LargeImageList = this.imageList1;
             this.lvData.BeginUpdate();
 
-            string[] imageExt = new string[] { ".tif", ".png", ".jpg", ".bmp"};
+            string[] imageExt = new string[] { ".tif", ".png", ".jpg", ".bmp" };
             string[] audioExt = new string[] { ".mp3", ".wav" };
             string[] strs = new string[] { ".tif", ".png", ".jpg", ".bmp", ".mp3", ".wav", ".wma" };
-            
+
             int index = 2;
 
             foreach (var res in Mod.Resources)

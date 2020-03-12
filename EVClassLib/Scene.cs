@@ -52,7 +52,7 @@ namespace EVClassLib
 
         public void Read()
         {
-            
+
         }
 
         public void AddModule(Module mod)
@@ -88,7 +88,7 @@ namespace EVClassLib
         {
             ModuleData data = ModuleDatas.Find(p => p.ID == id);
             Module mod = FileHelper.AnalysisSerializeFile<Module>(data.WorkPath, FileType.BinaryFile);
-            mod.WorkPath = data.WorkPath;
+            mod.WorkPath = data.WorkPath;      //存为了绝对路径
             return mod;
         }
 

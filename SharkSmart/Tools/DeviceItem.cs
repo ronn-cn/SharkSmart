@@ -1,13 +1,10 @@
-﻿using System;
+﻿using EVClassLib;
+using EVTechnology.Common.Helper;
+using EVTechnology.Common.Logging;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Controls;
-using EVClassLib;
-using EVTechnology.Common.Logging;
 
 namespace SharkSmart
 {
@@ -39,18 +36,22 @@ namespace SharkSmart
 			if (this.compiler.IsRunning) return;
 			_progress = 0;
 			cts = new CancellationTokenSource();
-			Task.Run(()=> {
+			Task.Run(() =>
+			{
 				Sdev.Connect();
 				this.compiler.SelectedModule = Module;
 				this.compiler.Compile();
 				//上传
-				if(this.compiler.IsTargetOk)
+				if (this.compiler.IsTargetOk)
 				{
 					//bool isSuccess = Sdev.Upload(Engine.Project.WorkPath + "\\" + Module.Name + Module.OutputPath + "\\Bin\\app.bin");
-					bool isSuccess = Sdev.UploadDirectory(Engine.Project.WorkPath + "\\" + Module.Name + Module.OutputPath + "\\upload");
+					string path = Engine.Project.WorkPath + "\\" + Module.Name + Module.OutputPath + "\\upload";
+
+					bool isSuccess = Sdev.UploadDirectory(path);
+					SendFileToService(path);
 					if (isSuccess)
 					{
-						if(Sdev.Connected)
+						if (Sdev.Connected)
 						{
 							Sdev.Send(CommandHelper.Restart());//发送重启命令
 						}
@@ -62,7 +63,28 @@ namespace SharkSmart
 				}
 				Thread.Sleep(1000);
 				Sdev.DisConnect();
-			},cts.Token);
+			}, cts.Token);
+		}
+
+
+		/// <summary>
+		/// 上传APP和资源文件到服务器
+		/// </summary>
+		/// <param name="path"></param>
+		private void SendFileToService(string path)
+		{
+			List<string> paths = new List<string>
+			{
+				path + "\\app.bin"
+			};
+
+			List<FileInfo> files = new List<FileInfo>();
+			files = FileHelper.GetFileByExt(path, ".raw", files);
+			foreach (FileInfo info in files)
+			{
+				paths.Add(info.FullName);
+			}
+			string result = HttpFileHelper.SendFileToService("http://172.16.7.11:8000/Upload.php", paths.ToArray());
 		}
 
 		public void Stop()

@@ -10,7 +10,6 @@ namespace EVClassLib
         public SProgbar()
         {
             this.Type = UIType.PROGBAR;
-            Event = new ValueEvent();
         }
 
         public override string GetCode()

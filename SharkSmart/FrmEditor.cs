@@ -1,9 +1,7 @@
 ﻿using EVClassLib;
 using NetDimension.NanUI;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 namespace SharkSmart
 {
@@ -34,7 +32,7 @@ namespace SharkSmart
                             str += ctl.Name + "|";
                     }
                 }
-                ExecuteJavascript("setTips(\""+str+"\")");
+                ExecuteJavascript("setTips(\"" + str + "\")");
             }
             get
             {
@@ -62,12 +60,12 @@ namespace SharkSmart
         {
             //LoadHandler.OnLoadEnd += LoadHandler_OnLoadEnd;
             //FilePath = @"C:\Users\admin\Desktop\wechat.py";
-            
+
         }
 
         private void LoadHandler_OnLoadEnd(object sender, Chromium.Event.CfxOnLoadEndEventArgs e)
         {
-            
+
             if (e.Frame.IsMain)
             {
             }

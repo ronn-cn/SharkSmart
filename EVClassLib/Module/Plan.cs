@@ -97,7 +97,7 @@ void		Task" + this.Name + @"(void *p_arg);";
 ";
                 if (this.PlanType == PlanType.Single)
                 {
-                    text += @"OSTaskSuspend(USER_TASK_PRIO_NUM + " + this.Priority + @");
+                    text += @"OSTaskSuspend(USER_TASK1_PRIO_NUM + " + this.Priority + @");
 break;";
                 }
                 text += @"
@@ -107,12 +107,12 @@ break;";
 void " + this.Name + @"_Start()
 {
     TASK" + this.Name + @"_STK = mymalloc(SRAMEX, " + this.Size.ToString() + @" * 4);
-    OSTaskCreate(Task" + this.Name + @",""Task" + this.Name + @""", (void*)0, (uint32_t*)&TASK" + this.Name + @"_STK[" + (this.Size - 1).ToString() + @"], USER_TASK_PRIO_NUM + " + this.Priority + @");
+    OSTaskCreate(Task" + this.Name + @",""Task" + this.Name + @""", (void*)0, (uint32_t*)&TASK" + this.Name + @"_STK[" + (this.Size - 1).ToString() + @"], USER_TASK1_PRIO_NUM + " + this.Priority + @");
 }
 
 void " + this.Name + @"_Stop()
 {
-    OSTaskSuspend(USER_TASK_PRIO_NUM + " + this.Priority + @");
+    OSTaskSuspend(USER_TASK1_PRIO_NUM + " + this.Priority + @");
 }
 ";
             }

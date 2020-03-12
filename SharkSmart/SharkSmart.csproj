@@ -200,12 +200,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tools\BlockConvertHelper.cs" />
     <Compile Include="Tools\CommandHelper.cs" />
     <Compile Include="Tools\CompileHelper.cs" />
     <Compile Include="Tools\DeviceItem.cs" />
     <Compile Include="Tools\DeviceManager.cs" />
     <Compile Include="Tools\Engine.cs" />
+    <Compile Include="Tools\HttpPostFileRequestClient.cs" />
+    <Compile Include="Tools\HttpPostRequestClient.cs" />
     <Compile Include="Tools\SharkDevice.cs" />
     <EmbeddedResource Include="FrmAddModule.resx">
       <DependentUpon>FrmAddModule.cs</DependentUpon>
@@ -466,6 +467,8 @@
     <Content Include="bin\Debug\editor\vs\language\typescript\tsMode.js" />
     <Content Include="bin\Debug\editor\vs\language\typescript\tsWorker.js" />
     <Content Include="bin\Debug\editor\vs\loader.js" />
+    <None Include="Resources\open.png" />
+    <None Include="Resources\code.png" />
     <None Include="Resources\data.png" />
     <None Include="Resources\wenjiantianjia.png" />
     <None Include="Resources\delete.png" />

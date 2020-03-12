@@ -1,33 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EVTechnology.Common.Helper;
 using HIDAPI;
-using EVTechnology.Common.Helper;
 using System.IO;
 
 namespace SharkSmart
 {
-	public class SharkDevice : HIDInterface 
+	public class SharkDevice : HIDInterface
 	{
-		private DiskDriveInfo driveinfo;
+		private readonly DiskDriveInfo driveinfo;
 
-        public string DrivePath { get { return driveinfo?.DriveLetter; } }
+		public string DrivePath { get { return driveinfo?.DriveLetter; } }
 
-		public SharkDevice():base()
+		public SharkDevice() : base()
 		{
 
 		}
 
-		public SharkDevice(HIDDevice hdev):base(hdev)
+		public SharkDevice(HIDDevice hdev) : base(hdev)
 		{
-			  this.driveinfo = USB.WhoDiskDevice(this.Device.vID, this.Device.pID, this.Device.serial);
+			this.driveinfo = USB.WhoDiskDevice(this.Device.vID, this.Device.pID, this.Device.serial);
 		}
-		
+
 		public void Upload(string sourcepath, string newpath, bool isoverwrite)
 		{
-			if(!Directory.Exists(Path.GetDirectoryName(newpath)))
+			if (!Directory.Exists(Path.GetDirectoryName(newpath)))
 			{
 				Directory.CreateDirectory(Path.GetDirectoryName(newpath));
 			}
@@ -49,14 +44,14 @@ namespace SharkSmart
 		public bool Upload(string sourcepath)
 		{
 			string newpath = "";
-			if(driveinfo != null)
+			if (driveinfo != null)
 			{
 				newpath = driveinfo.DriveLetter + "\\" + Path.GetFileName(sourcepath);
-				if(Directory.Exists(driveinfo.DriveLetter))
+				if (Directory.Exists(driveinfo.DriveLetter))
 				{
 					File.Copy(sourcepath, newpath, true);
 				}
-				if(File.Exists(newpath))
+				if (File.Exists(newpath))
 				{
 					return true;
 				}
@@ -69,10 +64,9 @@ namespace SharkSmart
 		/// </summary>
 		public bool UploadDirectory(string sourcepath)
 		{
-			string newpath = "";
 			if (driveinfo != null)
 			{
-				newpath = driveinfo.DriveLetter + "\\";
+				string newpath = driveinfo.DriveLetter + "\\";
 				if (Directory.Exists(driveinfo.DriveLetter))
 				{
 					if (Directory.Exists(newpath + "resources"))
@@ -82,12 +76,12 @@ namespace SharkSmart
 					}
 					FileHelper.CopyDirectory(sourcepath, newpath);
 				}
-				if (File.Exists(newpath+"app.bin"))
+				if (File.Exists(newpath + "app.bin"))
 				{
 					return true;
 				}
 			}
 			return false;
 		}
-    }
+	}
 }

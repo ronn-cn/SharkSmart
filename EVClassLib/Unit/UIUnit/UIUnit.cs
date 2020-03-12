@@ -70,11 +70,10 @@ void TaskView(void* p_arg);
                             if (page != null)
                             {
                                 SControl ctrl = page.Controls.Find(p => p.Name == ((ClangNameExpression)(cleft.Target)).Name);
-                                ctrl.Event = new BaseEvent();
                                 switch (cleft.Name)
                                 {
                                     case "Clicked":
-                                        ctrl.Event.Clicked = ((ClangNameExpression)(cright.Target)).Name + "()";
+                                        ctrl.OtherFiled = ((ClangNameExpression)(cright.Target)).Name + "()";
                                         break;
                                 }
                                 continue;
@@ -96,8 +95,12 @@ void TaskView(void* p_arg);
                     imp.Body.Statements.InsertRange(0, liststmts);
                 }
 
-                string str0 = @"
-    EV_LCD_DirSet(0);
+                //屏幕方向  0是竖向， 1是横向
+                int flag = 0;
+                if (Direction % 2 == 0) flag = 1;
+                else flag = 0;
+
+                string str0 = @"    EV_LCD_DirSet(" + flag + @");
     EV_LCD_BacklightSet(" + Light + @");
     TASKVIEW_STK = mymalloc(SRAMEX, 512 * 4);
     OSTaskCreate(TaskView,""TaskView"", (void*)0, (uint32_t*)&TASKVIEW_STK[511], EMWINDEMO_TASK_PRIO_NUM);";
@@ -110,12 +113,12 @@ void TaskView(void* p_arg)
 {";
             for (int i = 0; i < this.Pages.Count; i++)
             {
-                text += "    Create" + Pages[i].Name + "();\r";
+                text += "\r Create" + Pages[i].Name + "();\r";
             }
             text += @"  ShowPage(" + Pages[0].Name + @");
     while (1)
     {
-		GuiTouchExec();
+        GuiTouchExec();
         OSTimeDly(15);
     }
 }";
@@ -124,7 +127,7 @@ void TaskView(void* p_arg)
 
         public override string TransformToClang_forH()
         {
-            string text = "extern void DisplayUnit_Init();\r";
+            string text = "extern void " + Name + "_Init();\r";
             return text;
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EVTechnology.Common.Helper;
+using System;
 using System.Drawing;
 
 namespace EVClassLib
@@ -11,13 +12,12 @@ namespace EVClassLib
         public SRect()
         {
             this.Type = UIType.NONE;
-            //Event = null;
         }
 
         public override string GetCode()
         {
-            string text = string.Format("EV_LCD_FillRectangle({0}, {1}, {2}, {3}, {4}, {5});\r", Location.X, Location.Y, 
-                Size.Width+ Location.X, Size.Height + Location.Y,  ColorToABGR(FillColor), 0);
+            string text = string.Format("EV_LCD_FillRectangle({0}, {1}, {2}, {3}, {4}, {5});\r", Location.X, Location.Y,
+                Size.Width + Location.X, Size.Height + Location.Y, DrawHelper.RGB32toRGB16(FillColor), 0);
             return text;
         }
     }

@@ -1,8 +1,6 @@
 ﻿using HIDAPI;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -85,9 +83,9 @@ namespace SharkSmart
             this.HIDDevices.Clear();
             hidParent.GetHidDeviceList(ref HIDDevices, 0x0483, 0x5710);//获取该vidpid的设备列
             List<SharkDevice> sdevs = new List<SharkDevice>();
-            foreach(SharkDevice sdev in Devices)
+            foreach (SharkDevice sdev in Devices)
             {
-                foreach(HIDDevice hdev in HIDDevices)
+                foreach (HIDDevice hdev in HIDDevices)
                 {
                     if (sdev.Device.Compare(hdev))
                     {

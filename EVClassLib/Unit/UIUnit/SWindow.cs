@@ -15,7 +15,6 @@ namespace EVClassLib
         {
             this.Type = UIType.WINDOW;
             this.BackColor = Color.White;
-            //Event = null;
         }
 
         public override string GetCode()

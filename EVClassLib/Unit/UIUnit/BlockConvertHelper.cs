@@ -17,44 +17,14 @@ namespace EVClassLib
                 case BlockType.BUTTON:
                     ctl = new SButton();
                     break;
-                case BlockType.EDIT:
-                    ctl = new SEdit();
-                    break;
-                case BlockType.TEXT:
-                    ctl = new SText();
-                    break;
-                case BlockType.MULTIEDIT:
-                    ctl = new SMultiEdit();
-                    break;
-                case BlockType.RADIO:
-                    ctl = new SRadio();
-                    break;
-                case BlockType.CHECKBOX:
-                    ctl = new SCheckBox();
-                    break;
                 case BlockType.IMAGE:
                     ctl = new SImage();
-                    break;
-                case BlockType.HEADER:
-                    ctl = new SHeader();
-                    break;
-                case BlockType.SCROLLBAR:
-                    ctl = new SScrollBar();
-                    break;
-                case BlockType.SLIDER:
-                    ctl = new SSlider();
                     break;
                 case BlockType.WINDOW:
                     ctl = new SWindow();
                     break;
-                case BlockType.ICONVIEW:
-                    ctl = new SIconView();
-                    break;
                 case BlockType.RECT:
                     ctl = new SRect();
-                    break;
-                case BlockType.MULTIPAGE:
-                    ctl = new SMultiPage();
                     break;
                 case BlockType.PROGBAR:
                     ctl = new SProgbar();

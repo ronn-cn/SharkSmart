@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            EVTechnology.Common.Controls.ItemColors itemColors1 = new EVTechnology.Common.Controls.ItemColors();
+            EVTechnology.Common.Controls.ItemColors itemColors3 = new EVTechnology.Common.Controls.ItemColors();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStartPage));
-            EVTechnology.Common.Controls.ItemColors itemColors2 = new EVTechnology.Common.Controls.ItemColors();
+            EVTechnology.Common.Controls.ItemColors itemColors4 = new EVTechnology.Common.Controls.ItemColors();
             this.label10 = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.ivProject = new EVTechnology.Common.Controls.EVIconView();
@@ -119,10 +119,10 @@
             this.ivProject.ForeColor = System.Drawing.Color.Black;
             this.ivProject.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.ivProject.HideSelection = false;
-            itemColors1.ItemActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(246)))));
-            itemColors1.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(119)))), ((int)(((byte)(141)))));
-            itemColors1.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(49)))), ((int)(((byte)(82)))));
-            this.ivProject.ItemColors = itemColors1;
+            itemColors3.ItemActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(246)))));
+            itemColors3.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(119)))), ((int)(((byte)(141)))));
+            itemColors3.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(49)))), ((int)(((byte)(82)))));
+            this.ivProject.ItemColors = itemColors3;
             this.ivProject.ItemRadius = 5;
             this.ivProject.ItemSize = new System.Drawing.Size(290, 50);
             this.ivProject.LabelWrap = false;
@@ -279,9 +279,9 @@
             this.ivComponent.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ivComponent.ForeColor = System.Drawing.Color.White;
             this.ivComponent.HideSelection = false;
-            this.ivComponent.Location = new System.Drawing.Point(9, 240);
+            this.ivComponent.Location = new System.Drawing.Point(9, 229);
             this.ivComponent.Name = "ivComponent";
-            this.ivComponent.Size = new System.Drawing.Size(229, 250);
+            this.ivComponent.Size = new System.Drawing.Size(229, 261);
             this.ivComponent.SmallImageList = this.imgProject;
             this.ivComponent.TabIndex = 30;
             this.ivComponent.UseCompatibleStateImageBehavior = false;
@@ -294,7 +294,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(174, 210);
+            this.btnDelete.Location = new System.Drawing.Point(174, 198);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(60, 25);
             this.btnDelete.TabIndex = 29;
@@ -309,7 +309,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAdd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAdd.Location = new System.Drawing.Point(108, 210);
+            this.btnAdd.Location = new System.Drawing.Point(108, 198);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(60, 25);
             this.btnAdd.TabIndex = 28;
@@ -322,7 +322,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 210);
+            this.label1.Location = new System.Drawing.Point(9, 198);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 25;
@@ -421,10 +421,10 @@
             this.tvPreview.AutoScroll = true;
             this.tvPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(59)))), ((int)(((byte)(110)))));
             this.tvPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            itemColors2.ItemActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(246)))));
-            itemColors2.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(119)))), ((int)(((byte)(141)))));
-            itemColors2.ItemHoverColor = System.Drawing.SystemColors.ControlLight;
-            this.tvPreview.ItemColors = itemColors2;
+            itemColors4.ItemActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(246)))));
+            itemColors4.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(119)))), ((int)(((byte)(141)))));
+            itemColors4.ItemHoverColor = System.Drawing.SystemColors.ControlLight;
+            this.tvPreview.ItemColors = itemColors4;
             this.tvPreview.Location = new System.Drawing.Point(9, 85);
             this.tvPreview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tvPreview.Name = "tvPreview";
@@ -645,5 +645,5 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.ListView ivComponent;
-	}
+    }
 }

@@ -3,13 +3,9 @@ using EVTechnology.Common.Controls;
 using EVTechnology.Common.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SharkSmart
@@ -36,7 +32,7 @@ namespace SharkSmart
             tool = new RecordTool();
             UpdateProjectList();
             if (!string.IsNullOrEmpty(lastlyPath))
-                TmpPath =lastlyPath;
+                TmpPath = lastlyPath;
             else
                 TmpPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             for (int i = 0; i < 100; i++)
@@ -48,7 +44,7 @@ namespace SharkSmart
                     break;
                 }
             }
-            
+
             tbPath.Text = TmpPath + "\\" + tbProName.Text;
             UpdatePreset();
             if (ivComponent.Items.Count > 0)
@@ -130,21 +126,21 @@ namespace SharkSmart
             {
                 if (p == pl)
                 {
-                    SetPaneEnable(p,true);
+                    SetPaneEnable(p, true);
                 }
                 else
                 {
-                    SetPaneEnable(p,false);
+                    SetPaneEnable(p, false);
                 }
             }
         }
 
         private void SetPaneEnable(Panel pnl, bool enable)
         {
-            switch(pnl.Name)
+            switch (pnl.Name)
             {
                 case "plA":
-                    if(enable)
+                    if (enable)
                     {
                         pnl.Enabled = true;
                         pnl.BackColor = Color.FromArgb(32, 45, 89);
@@ -164,7 +160,7 @@ namespace SharkSmart
                     }
                     break;
                 case "plB":
-                    if(enable)
+                    if (enable)
                     {
                         pnl.Enabled = true;
                         pnl.BackColor = Color.FromArgb(32, 45, 89);
@@ -189,7 +185,7 @@ namespace SharkSmart
                     }
                     break;
                 case "plC":
-                    if(enable)
+                    if (enable)
                     {
                         pnl.Enabled = true;
                         pnl.BackColor = Color.FromArgb(32, 45, 89);
@@ -274,6 +270,7 @@ namespace SharkSmart
             mod.PresetName = cmbPreset.SelectedItem.ToString();
             mod.Parent = Scene.ID;
             tmpModules.Add(mod);
+
             ListViewItem item = new ListViewItem
             {
                 Name = tbName.Text,

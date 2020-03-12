@@ -4,34 +4,41 @@ using System.Drawing;
 namespace EVClassLib
 {
     [Serializable]
-    public abstract class SControl : UIBase
+    public abstract class SControl
     {
+        public Point Location { set; get; }
+
+        public Size Size { set; get; }
+
+        public Font Font { set; get; }
+
         public string Name { get; set; }
 
         public string ParentName { get; set; }
 
-        public BaseEvent Event { set; get; }
-
         public UIType Type { get; set; }
 
+        public string OtherFiled { set; get; }
+
         public abstract string GetCode();
+    }
 
-        protected string ColorToABGR(Color color)
-        {
-            byte a, r, g, b;
-            a = color.A;
-            r = color.R;
-            g = color.G;
-            b = color.B;
-            return Covering(a) + Covering(r) + Covering(g) + Covering(b);
-        }
-
-        /// <summary>
-        /// 补位
-        /// </summary>
-        protected string Covering(byte a)
-        {
-            return a.ToString("X").PadLeft(2, '0');
-        }
+    public enum UIType
+    {
+        NONE,
+        WINDOW,
+        BUTTON,
+        TEXT,
+        EDIT,
+        HEADER,
+        MULTIEDIT,
+        MULTIPAGE,
+        CHECKBOX,
+        RADIO,
+        PROGBAR,
+        ICONVIEW,
+        IMAGE,
+        SCROLLBAR,
+        SLIDER,
     }
 }

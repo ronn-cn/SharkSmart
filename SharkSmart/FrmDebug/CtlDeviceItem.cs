@@ -1,14 +1,9 @@
-﻿using System;
+﻿using EVClassLib;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using EVClassLib;
 using System.Diagnostics;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace SharkSmart
 {
@@ -21,7 +16,7 @@ namespace SharkSmart
             InitializeComponent();
         }
 
-        public CtlDeviceItem(DeviceItem item):this()
+        public CtlDeviceItem(DeviceItem item) : this()
         {
             this.Item = item;
             this.Output = new CtlDebugOutput(this.Item.Logger);
@@ -58,7 +53,7 @@ namespace SharkSmart
                 btnQucik.BackgroundImage = Properties.Resources.play__2_;
             pbar.Value = value;
         }
-        
+
         public Panel outputPanel;
 
         /// <summary>
@@ -84,7 +79,7 @@ namespace SharkSmart
             g.DrawLine(p, e.ClipRectangle.X, e.ClipRectangle.Y, e.ClipRectangle.X + e.ClipRectangle.Width, e.ClipRectangle.Y);
         }
 
-        private void UpdateCombox()
+        public void UpdateCombox()
         {
             cbmod.Items.Clear();
             if (Engine.Project == null) return;
@@ -98,7 +93,7 @@ namespace SharkSmart
         private void BtnQucik_Click(object sender, EventArgs e)
         {
             if (this.Item == null) return;
-            if(this.outputPanel != null)
+            if (this.outputPanel != null)
             {
                 this.Output.Dock = DockStyle.Fill;
                 this.outputPanel.Controls.Clear();
@@ -123,7 +118,7 @@ namespace SharkSmart
         private void BtnConfig_Click(object sender, EventArgs e)
         {
             FrmDeviceConfig frm = new FrmDeviceConfig();
-            frm.ShowDialog(); 
+            frm.ShowDialog();
         }
 
         private void BtnFolder_Click(object sender, EventArgs e)

@@ -35,13 +35,14 @@
             this.tsmTool = new EVTechnology.Common.Controls.ToolStripNoFrame();
             this.tslSpace = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cbCheck = new System.Windows.Forms.CheckBox();
+            this.tsbStart = new System.Windows.Forms.ToolStripButton();
+            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tsbCompile = new System.Windows.Forms.ToolStripButton();
             this.tsmTool.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -78,8 +79,9 @@
             this.tsmTool.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslSpace,
             this.toolStripLabel4,
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.tsbStart,
+            this.tsbRefresh,
+            this.tsbCompile});
             this.tsmTool.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.tsmTool.Location = new System.Drawing.Point(40, 0);
             this.tsmTool.Name = "tsmTool";
@@ -101,27 +103,6 @@
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(0, 72);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::SharkSmart.Properties.Resources.play__2_;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(50, 50);
-            this.toolStripButton1.Text = "一键烧录";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.AutoSize = false;
-            this.toolStripButton2.BackgroundImage = global::SharkSmart.Properties.Resources.cached;
-            this.toolStripButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(50, 50);
-            this.toolStripButton2.Text = "刷新设备列表";
             // 
             // panel1
             // 
@@ -168,6 +149,41 @@
             this.cbCheck.UseVisualStyleBackColor = true;
             this.cbCheck.CheckedChanged += new System.EventHandler(this.CbCheck_CheckedChanged);
             // 
+            // tsbStart
+            // 
+            this.tsbStart.AutoSize = false;
+            this.tsbStart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbStart.Image = global::SharkSmart.Properties.Resources.play__2_;
+            this.tsbStart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbStart.Name = "tsbStart";
+            this.tsbStart.Size = new System.Drawing.Size(50, 50);
+            this.tsbStart.Text = "一键烧录";
+            this.tsbStart.Click += new System.EventHandler(this.TsbStart_Click);
+            // 
+            // tsbRefresh
+            // 
+            this.tsbRefresh.AutoSize = false;
+            this.tsbRefresh.BackgroundImage = global::SharkSmart.Properties.Resources.cached;
+            this.tsbRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRefresh.Name = "tsbRefresh";
+            this.tsbRefresh.Size = new System.Drawing.Size(50, 50);
+            this.tsbRefresh.Text = "刷新设备列表";
+            this.tsbRefresh.Click += new System.EventHandler(this.TsbRefresh_Click);
+            // 
+            // tsbCompile
+            // 
+            this.tsbCompile.AutoSize = false;
+            this.tsbCompile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbCompile.ForeColor = System.Drawing.Color.White;
+            this.tsbCompile.Image = global::SharkSmart.Properties.Resources.code;
+            this.tsbCompile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCompile.Name = "tsbCompile";
+            this.tsbCompile.Size = new System.Drawing.Size(50, 50);
+            this.tsbCompile.Text = "编译";
+            this.tsbCompile.Click += new System.EventHandler(this.TsbCompile_Click);
+            // 
             // CtlDebug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -198,12 +214,13 @@
         private EVTechnology.Common.Controls.ToolStripNoFrame tsmTool;
         private System.Windows.Forms.ToolStripLabel tslSpace;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbStart;
         private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton tsbRefresh;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox cbCheck;
+        private System.Windows.Forms.ToolStripButton tsbCompile;
     }
 }

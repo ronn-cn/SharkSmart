@@ -1,13 +1,7 @@
-﻿using EVClassLib    ;
+﻿using EVClassLib;
 using EVTechnology.Common.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SharkSmart
@@ -67,7 +61,7 @@ namespace SharkSmart
                 tbName.Text = this.Tag.ToString();
                 tbName.ReadOnly = false;
             }
-            else if(ivProject.SelectedItems[0].Index == 1)
+            else if (ivProject.SelectedItems[0].Index == 1)
             {
                 panel2.Visible = true;
                 tbName.Text = "DisplayUnit";

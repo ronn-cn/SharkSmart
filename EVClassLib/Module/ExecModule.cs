@@ -112,6 +112,9 @@ namespace EVClassLib
             Directory.CreateDirectory(FolderPath + "\\" + "Resources");
         }
 
+        /// <summary>
+        /// 获取视图数据、生成资源文件
+        /// </summary>
         protected void GetViewData()
         {
             foreach (var unit in Units)
@@ -119,76 +122,34 @@ namespace EVClassLib
                 if (unit.GetType() != typeof(UIUnit))
                     continue;
 
-                List<Canvas> datas = new List<Canvas>();
+                Canvas cur = new Canvas();
                 foreach (var page in ((UIUnit)unit).Pages)
                 {
-                    string path = Path.Combine(GetFilePath(3, page.Name));
+                    string path = GetFilePath(3, page.Name);
                     if (string.IsNullOrEmpty(File.ReadAllText(path))) return;
-                    datas = FileHelper.AnalysisSerializeFile<List<Canvas>>(path, FileType.XMLFile);
-                    List<SControl> tmps = new List<SControl>();
-                    tmps.AddRange(page.Controls);
+                    cur = FileHelper.AnalysisSerializeFile<Canvas>(path, FileType.XMLFile);
                     page.Controls.Clear();
-                    foreach (var block in datas[0].Blocks)
+                    foreach (var block in cur.Blocks)
                     {
                         SControl ctrl = BlockConvertHelper.ConvertClass(block);
-                        if (ctrl.Name != page.Name) { ctrl.Name = page.Name + "_" + ctrl.Name; }
-                        BaseEvent be = tmps.Find(p => p.Name == ctrl.Name)?.Event;
-                        if (be != null) ctrl.Event = be;
+                        //命名规范  Page_ctl
+                        if (ctrl.Name != page.Name) 
+                            ctrl.Name = page.Name + "_" + ctrl.Name; 
                         page.Controls.Add(ctrl);
-                        AddControlRes(block);
                     }
-                    var cur = datas[0];
-                    string filename = cur.Name;
-                    string respath = Path.GetDirectoryName(WorkPath) + "\\Resources\\" + filename + ".raw";
-                    Resource res = Resources.Find(p => p.Name == filename);
+                    string respath = FolderPath + "\\Resources\\" + page.Name + ".raw";
+                    Resource res = Resources.Find(p => p.Name == page.Name);
                     if (res == null)
                     {
                         res = new Resource();
-                        res.Name = filename;
+                        res.Name = page.Name;
                         res.Type = ResType.File;
                         Resources.Add(res);
                     }
-                    res.Path = "\\Resources\\" + filename + ".raw";
+                    res.Path = "\\Resources\\" + page.Name + ".raw";
                     cur.CreateNoFontFile(respath);
                 }
             }
-        }
-
-        private void AddControlRes(UIBlock block)
-        {
-            if (block.GetType() == typeof(UIImage))
-            {
-                UIImage img = block as UIImage;
-                AddResource(img.XMLImagePath);
-            }
-            else if (block.GetType() == typeof(UIIconView))
-            {
-                UIIconView img = block as UIIconView;
-                foreach (var item in img.Items)
-                {
-                    AddResource(item.XMLImagePath);
-                }
-            }
-            else if (block.GetType() == typeof(UIButton))
-            {
-                UIButton btn = block as UIButton;
-                if (btn.BKImage != null && btn.XMLImagePath != null)
-                    AddResource(btn.XMLImagePath);
-            }
-        }
-
-        private void AddResource(string path)
-        {
-            string name = Path.GetFileNameWithoutExtension(path);
-            Resource res = Resources.Find(p => p.Name == name);
-            if (res == null)
-            {
-                res = new Resource();
-                Resources.Add(res);
-            }
-            res.Name = name;
-            res.Type = res.GetTypeByExt(Path.GetExtension(path));
-            res.Path = "\\Resources\\" + Path.GetFileName(path);
         }
 
         public override void Save()
@@ -279,7 +240,7 @@ namespace EVClassLib
         private string GetFilePath(int index, string fileName)
         {
             string path = "";
-            switch(index)
+            switch (index)
             {
                 case 1:
                     //单元文件路径

@@ -1,18 +1,11 @@
 ﻿using EVClassLib;
 using EVTechnology.Common.Controls;
-using EVTechnology.Common.Helper;
 using EVTechnology.Common.Logging;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SharkSmart
@@ -119,7 +112,7 @@ namespace SharkSmart
 
             tvExplorer.ExpandAll();
             foreach (var no in nde)
-                no.Collapse(); 
+                no.Collapse();
         }
 
         private enum ImageType
@@ -326,7 +319,7 @@ namespace SharkSmart
         {
             //添加新模块
             FrmAddModule frm = new FrmAddModule();
-            if(frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog() == DialogResult.OK)
                 UpdateExplorer();
         }
 
@@ -487,6 +480,22 @@ namespace SharkSmart
             mod.Delete();
             Engine.Project.DeleteModule(mod);
             UpdateExplorer();
+        }
+
+        private void BtnNewBulid_Click(object sender, EventArgs e)
+        {
+            Process process = new Process();//创建进程对象    
+            ProcessStartInfo startInfo = new ProcessStartInfo("SharkSmart.exe"); // 括号里是(程序名,参数)
+            process.StartInfo = startInfo;
+            process.Start();
+        }
+
+        private void TvExplorer_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+        {
+            if (true)
+            {
+
+            }
         }
     }
 }

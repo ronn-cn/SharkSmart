@@ -1,7 +1,7 @@
-﻿using System;
+﻿using EVTechnology.Common.Logging;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using EVTechnology.Common.Logging;
 
 namespace SharkSmart
 {
@@ -15,7 +15,7 @@ namespace SharkSmart
             InitializeComponent();
         }
 
-        public CtlDebugOutput(Logger logger):this()
+        public CtlDebugOutput(Logger logger) : this()
         {
             this.Logger = logger;
             this.Logger.OutputStreamEvent += new OutputStreamHandler(LoggerOutputStream);
@@ -36,6 +36,9 @@ namespace SharkSmart
 
         private void LoggerOutputStream(string text)
         {
+            if (!this.rtbConsole.Created)
+                return;
+
             if (text.Contains("ERROR"))
             {
                 this.rtbConsole.BeginInvoke(updateText, Color.Red, text);

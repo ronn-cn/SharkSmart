@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            EVTechnology.Common.Controls.ItemColors itemColors1 = new EVTechnology.Common.Controls.ItemColors();
-            EVTechnology.Common.Controls.EVTabPage evTabPage1 = new EVTechnology.Common.Controls.EVTabPage();
+            EVTechnology.Common.Controls.ItemColors itemColors4 = new EVTechnology.Common.Controls.ItemColors();
+            EVTechnology.Common.Controls.EVTabPage evTabPage4 = new EVTechnology.Common.Controls.EVTabPage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tvExplorer = new System.Windows.Forms.TreeView();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
@@ -51,7 +51,7 @@
             this.tbMain = new EVTechnology.Common.Controls.EVTabControl();
             this.btnDebug = new System.Windows.Forms.Button();
             this.btnCatalog = new System.Windows.Forms.Button();
-            this.btnAddPlan = new System.Windows.Forms.Button();
+            this.btnNewBulid = new System.Windows.Forms.Button();
             this.btnAddUnit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnProject = new System.Windows.Forms.Button();
@@ -67,12 +67,12 @@
             this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(77)))));
             this.TitleBar.Controls.Add(this.btnSave);
             this.TitleBar.Controls.Add(this.btnProject);
-            this.TitleBar.Controls.Add(this.btnAddPlan);
+            this.TitleBar.Controls.Add(this.btnNewBulid);
             this.TitleBar.Controls.Add(this.btnAddUnit);
             this.TitleBar.Controls.Add(this.btnCatalog);
             this.TitleBar.Controls.Add(this.btnDebug);
             this.TitleBar.Location = new System.Drawing.Point(4, 4);
-            this.TitleBar.Size = new System.Drawing.Size(1089, 80);
+            this.TitleBar.Size = new System.Drawing.Size(1153, 80);
             // 
             // tvExplorer
             // 
@@ -83,15 +83,17 @@
             this.tvExplorer.ForeColor = System.Drawing.Color.White;
             this.tvExplorer.ImageIndex = 0;
             this.tvExplorer.ImageList = this.imageList;
+            this.tvExplorer.ItemHeight = 30;
+            this.tvExplorer.LabelEdit = true;
             this.tvExplorer.LineColor = System.Drawing.Color.White;
             this.tvExplorer.Location = new System.Drawing.Point(0, 50);
             this.tvExplorer.Name = "tvExplorer";
             this.tvExplorer.SelectedImageIndex = 0;
             this.tvExplorer.ShowNodeToolTips = true;
-            this.tvExplorer.ShowPlusMinus = false;
             this.tvExplorer.ShowRootLines = false;
-            this.tvExplorer.Size = new System.Drawing.Size(290, 556);
+            this.tvExplorer.Size = new System.Drawing.Size(290, 712);
             this.tvExplorer.TabIndex = 0;
+            this.tvExplorer.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.TvExplorer_AfterLabelEdit);
             this.tvExplorer.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TvExplorer_NodeMouseClick);
             this.tvExplorer.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TvExplorer_NodeMouseDoubleClick);
             // 
@@ -184,7 +186,7 @@
             this.panel1.Location = new System.Drawing.Point(4, 84);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 10, 10, 0);
-            this.panel1.Size = new System.Drawing.Size(300, 606);
+            this.panel1.Size = new System.Drawing.Size(300, 762);
             this.panel1.TabIndex = 1;
             // 
             // toolStripNoFrame1
@@ -227,7 +229,7 @@
             this.panel2.Location = new System.Drawing.Point(304, 84);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(789, 606);
+            this.panel2.Size = new System.Drawing.Size(853, 762);
             this.panel2.TabIndex = 2;
             // 
             // tbMain
@@ -237,17 +239,17 @@
             this.tbMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbMain.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
             this.tbMain.ForeColor = System.Drawing.Color.White;
-            itemColors1.ItemActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(197)))));
-            itemColors1.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(94)))));
-            itemColors1.ItemHoverColor = System.Drawing.SystemColors.ControlLight;
-            this.tbMain.ItemColors = itemColors1;
+            itemColors4.ItemActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(197)))));
+            itemColors4.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(94)))));
+            itemColors4.ItemHoverColor = System.Drawing.SystemColors.ControlLight;
+            this.tbMain.ItemColors = itemColors4;
             this.tbMain.ItemMargin = 0;
-            evTabPage1.IsSaved = true;
-            evTabPage1.TabIcon = null;
-            evTabPage1.TabId = 0;
-            evTabPage1.TabPath = null;
-            evTabPage1.TabText = "Home";
-            this.tbMain.Items.Add(evTabPage1);
+            evTabPage4.IsSaved = true;
+            evTabPage4.TabIcon = null;
+            evTabPage4.TabId = 0;
+            evTabPage4.TabPath = null;
+            evTabPage4.TabText = "Home";
+            this.tbMain.Items.Add(evTabPage4);
             this.tbMain.ItemSize = new System.Drawing.Size(150, 40);
             this.tbMain.Location = new System.Drawing.Point(0, 10);
             this.tbMain.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -257,7 +259,7 @@
             this.tbMain.SelectedItem = null;
             this.tbMain.ShowCloseButton = true;
             this.tbMain.ShowSavedFlag = true;
-            this.tbMain.Size = new System.Drawing.Size(789, 596);
+            this.tbMain.Size = new System.Drawing.Size(853, 752);
             this.tbMain.TabIndex = 0;
             // 
             // btnDebug
@@ -272,7 +274,7 @@
             this.btnDebug.Font = new System.Drawing.Font("宋体", 10F);
             this.btnDebug.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDebug.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDebug.Location = new System.Drawing.Point(990, 29);
+            this.btnDebug.Location = new System.Drawing.Point(1054, 29);
             this.btnDebug.Name = "btnDebug";
             this.btnDebug.Size = new System.Drawing.Size(48, 48);
             this.btnDebug.TabIndex = 4;
@@ -292,7 +294,7 @@
             this.btnCatalog.Font = new System.Drawing.Font("宋体", 10F);
             this.btnCatalog.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCatalog.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCatalog.Location = new System.Drawing.Point(1038, 29);
+            this.btnCatalog.Location = new System.Drawing.Point(1102, 29);
             this.btnCatalog.Name = "btnCatalog";
             this.btnCatalog.Size = new System.Drawing.Size(48, 48);
             this.btnCatalog.TabIndex = 5;
@@ -300,24 +302,24 @@
             this.btnCatalog.UseVisualStyleBackColor = false;
             this.btnCatalog.Click += new System.EventHandler(this.BtnCatalog_Click);
             // 
-            // btnAddPlan
+            // btnNewBulid
             // 
-            this.btnAddPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(77)))));
-            this.btnAddPlan.BackgroundImage = global::SharkSmart.Properties.Resources.plan;
-            this.btnAddPlan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAddPlan.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddPlan.FlatAppearance.BorderSize = 0;
-            this.btnAddPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPlan.Font = new System.Drawing.Font("宋体", 10F);
-            this.btnAddPlan.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAddPlan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddPlan.Location = new System.Drawing.Point(180, 29);
-            this.btnAddPlan.Name = "btnAddPlan";
-            this.btnAddPlan.Size = new System.Drawing.Size(48, 48);
-            this.btnAddPlan.TabIndex = 2;
-            this.btnAddPlan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAddPlan.UseVisualStyleBackColor = false;
-            this.btnAddPlan.Visible = false;
+            this.btnNewBulid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(77)))));
+            this.btnNewBulid.BackgroundImage = global::SharkSmart.Properties.Resources.open;
+            this.btnNewBulid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnNewBulid.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNewBulid.FlatAppearance.BorderSize = 0;
+            this.btnNewBulid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewBulid.Font = new System.Drawing.Font("宋体", 10F);
+            this.btnNewBulid.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNewBulid.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNewBulid.Location = new System.Drawing.Point(180, 29);
+            this.btnNewBulid.Name = "btnNewBulid";
+            this.btnNewBulid.Size = new System.Drawing.Size(48, 48);
+            this.btnNewBulid.TabIndex = 2;
+            this.btnNewBulid.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNewBulid.UseVisualStyleBackColor = false;
+            this.btnNewBulid.Click += new System.EventHandler(this.BtnNewBulid_Click);
             // 
             // btnAddUnit
             // 
@@ -382,7 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(23)))), ((int)(((byte)(51)))));
             this.CaptionHeight = 80;
-            this.ClientSize = new System.Drawing.Size(1097, 694);
+            this.ClientSize = new System.Drawing.Size(1161, 850);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -419,7 +421,7 @@
         private System.Windows.Forms.Button btnCatalog;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnProject;
-        private System.Windows.Forms.Button btnAddPlan;
+        private System.Windows.Forms.Button btnNewBulid;
         private System.Windows.Forms.Button btnAddUnit;
         private EVTechnology.Common.Controls.ToolStripNoFrame toolStripNoFrame1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;

@@ -56,7 +56,7 @@ namespace SharkSmart
         private static List<string> GetComponentLibs()
         {
             List<string> componentLibs = new List<string>();
-            string folder = Path.Combine(Environment.CurrentDirectory, "Library\\Components");
+            string folder = Path.Combine(Environment.CurrentDirectory, SoftwareSetting.SourceCodePath);
             DirectoryInfo directory = new DirectoryInfo(folder);
             DirectoryInfo[] infos = directory.GetDirectories();
             foreach (DirectoryInfo info in infos)

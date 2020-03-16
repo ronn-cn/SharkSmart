@@ -221,6 +221,13 @@ namespace SharkSmart
             foreach (var mod in tmpModules)
             {
                 Scene.AddModule(mod);
+                string folder = Path.Combine(Environment.CurrentDirectory, "Library\\Components", ((ExecModule)mod).PresetName, ((ExecModule)mod).PresetName + ".lib");
+                ExecModPreset pre = FileHelper.AnalysisSerializeFile<ExecModPreset>(folder, FileType.BinaryFile);
+                if (pre.IsDisplay)
+                {
+                    UIUnit uI = new UIUnit(SoftwareSetting.DisplayUnitName, 100, 0, new Size(800, 480));
+                    ((ExecModule)mod).AddUnit(uI);
+                }
             }
 
             Scene.Build();
@@ -268,7 +275,11 @@ namespace SharkSmart
             ExecModule mod = new ExecModule();
             mod.Name = tbName.Text;
             mod.PresetName = cmbPreset.SelectedItem.ToString();
+            
+
             mod.Parent = Scene.ID;
+            
+
             tmpModules.Add(mod);
 
             ListViewItem item = new ListViewItem
@@ -497,6 +508,8 @@ namespace SharkSmart
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FrmModPreset frm = new FrmModPreset();
+            frm.ShowDialog();
         }
     }
 

@@ -117,30 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="imgProject.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="imgProject.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADc
-        AgAAAk1TRnQBSQFMAwEBAAFQAQABUAEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMA
-        ARgDAAEBAQABIAYAASQSAGD//wAhAGD//wAhAGD//wAhACT/A94F/wPTBf8DzwX/A80h//8AIQAY/wP9
-        Af8D+wH/A/sB/wPcAf8D/AH/A9IB/wP7Af8DzwH/A/sB/wPNAf8D+wH/A/sZ//8AIQAU/wPbAf8D4gH/
-        A+UB/wPlAf8D5QH/A+UB/wPlAf8D5QH/A+UB/wPlAf8D5QH/A+UB/wPlAf8DzRX//wAhABT/A9Ql/wP9
-        Cf8DzRX//wAhABD/A/AB/wPSIf8DzQH/A9oB/wPQBf8DzQH/A/AB/wPwDf//ACEAEP8D7QH/A9Id/wP+
-        Af8D3wX/A80F/wPNAf8D7QH/A+0N//8AIQAU/wPUHf8D8gH/A80B/wPSAf8D1gX/A80V//8AIQAQ/wPN
-        Af8DzR3/A80R/wPNAf8DzQH/A80N//8AIQAU/wPUEf8D+AH/A80B/wPNAf8D/BH/A80V//8AIQAQ/wPN
-        Af8DzRH/A80d/wPNAf8DzQH/A80N//8AIQAU/wPUCf8DzQH/A80B/wPrHf8DzRX//wAhABD/A9YB/wPO
-        Bf8D3AH/A/kF/wPOHf8DzQH/A9YB/wPWDf//ACEAEP8D/gH/A9QF/wPsAf8D1AH/A+EB/wPTHf8DzQH/
-        A/4B/wP+Df//ACEAFP8D1An/A/QB/wPuIf8DzRX//wAhABT/A9gx/wPNFf//ACEAGP8D4QH/A90B/wPd
-        Af8D0wH/A94B/wPPAf8D3QH/A80B/wPdAf8DzQH/A90B/wPdAf8D+xX//wAhACT/A94F/wPTBf8DzwX/
-        A80h//8AIQBg//8AIQBg//8AIQBg//8AIQBg//8AIQABQgFNAT4HAAE+AwABKAMAAWADAAEYAwABAQEA
-        AQEFAAEgAQEWAAP//wAiAAs=
-</value>
-  </data>
-  <metadata name="cmsMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>130, 22</value>
-  </metadata>
 </root>

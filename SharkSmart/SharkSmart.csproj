@@ -90,6 +90,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModPreset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModPreset.Designer.cs">
+      <DependentUpon>FrmModPreset.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmResources.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +220,9 @@
     <Compile Include="Tools\HttpPostFileRequestClient.cs" />
     <Compile Include="Tools\HttpPostRequestClient.cs" />
     <Compile Include="Tools\SharkDevice.cs" />
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddModule.resx">
       <DependentUpon>FrmAddModule.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModPreset.resx">
+      <DependentUpon>FrmModPreset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmResources.resx">
       <DependentUpon>FrmResources.cs</DependentUpon>

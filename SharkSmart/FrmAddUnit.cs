@@ -64,7 +64,7 @@ namespace SharkSmart
             else if (ivProject.SelectedItems[0].Index == 1)
             {
                 panel2.Visible = true;
-                tbName.Text = "DisplayUnit";
+                tbName.Text = SoftwareSetting.DisplayUnitName;
                 tbName.ReadOnly = true;
             }
 

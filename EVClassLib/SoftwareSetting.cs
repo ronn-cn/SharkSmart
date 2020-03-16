@@ -32,7 +32,8 @@ namespace EVClassLib
         //资源路径
         public static string RecordPath = "Data\\used.field";                       // 记录保存路径(相对于软件的相对路径)
         public static string SourceCodePath = "Library\\Components";                // 源码文件夹路径
-        public static string UnitTemplates = "Library\\UnitTemplates.lib";          // 单元预设路径
+
+        public static string DisplayUnitName = "DisplayUnit";
 
         public SoftwareSetting()
         {

@@ -26,6 +26,7 @@ namespace SharkSmart
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            tbMain.Show();
             InitSystem();
 
             if (Engine.Project != null)
@@ -190,6 +191,9 @@ namespace SharkSmart
             }
         }
 
+        /// <summary>
+        /// 打开代码页
+        /// </summary>
         private void OpenCodeView(EVTabPage page, string path)
         {
             FrmEditor editor = cacheEditor;
@@ -198,6 +202,9 @@ namespace SharkSmart
             CreateCodePage();
         }
 
+        /// <summary>
+        /// 打开数据页
+        /// </summary>
         private void OpenDatasView(EVTabPage page)
         {
             Module mod = GetModuleByNode();
@@ -207,6 +214,9 @@ namespace SharkSmart
             AddPageToTB(frm, page);
         }
 
+        /// <summary>
+        /// 打开视图页
+        /// </summary>
         private void OpenViewPage(EVTabPage page, string path)
         {
             FrmViewPage frm = new FrmViewPage();
@@ -490,12 +500,10 @@ namespace SharkSmart
             process.Start();
         }
 
-        private void TvExplorer_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+        private void BtnAbout_Click(object sender, EventArgs e)
         {
-            if (true)
-            {
-
-            }
+            FrmAbout frm = new FrmAbout();
+            frm.ShowDialog();
         }
     }
 }

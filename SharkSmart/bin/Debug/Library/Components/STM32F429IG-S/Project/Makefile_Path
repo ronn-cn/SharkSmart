@@ -1,2 +1,0 @@
-ROOT_DIR = D:\Desktop\NETProj\SharkSmart08\SharkSmart08\bin\Debug
-LIB_DIR = $(ROOT_DIR)\Library\Components\STM32F429IG-S

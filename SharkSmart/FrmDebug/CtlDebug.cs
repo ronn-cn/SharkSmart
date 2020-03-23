@@ -133,7 +133,7 @@ namespace SharkSmart
         {
             //编译不烧录
             CompileHelper compiler = new CompileHelper();
-            compiler.Logger = new EVTechnology.Common.Logging.Logger();
+            compiler.Logger = new EVTechnology.Logging.Logger();
 
             List<ExecModule> mods = Engine.Project.GetAllModule();
             foreach (var mod in mods)

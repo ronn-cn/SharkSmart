@@ -1,5 +1,5 @@
 ﻿using EVClassLib;
-using EVTechnology.Common.Controls;
+using EVTechnology.Controls;
 using System;
 using System.IO;
 using System.Windows.Forms;

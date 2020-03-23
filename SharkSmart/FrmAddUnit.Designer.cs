@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            EVTechnology.Common.Controls.ItemColors itemColors1 = new EVTechnology.Common.Controls.ItemColors();
+            EVTechnology.Controls.ItemColors itemColors1 = new EVTechnology.Controls.ItemColors();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("空白单元");
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("视图单元");
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.ivProject = new EVTechnology.Common.Controls.EVIconView();
+            this.ivProject = new EVTechnology.Controls.EVIconView();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -491,7 +491,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private EVTechnology.Common.Controls.EVIconView ivProject;
+        private EVTechnology.Controls.EVIconView ivProject;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rb0;

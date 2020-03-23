@@ -1,4 +1,4 @@
-﻿using EVTechnology.Common.Helper;
+﻿using EVTechnology.Helper;
 using System;
 using System.Drawing;
 

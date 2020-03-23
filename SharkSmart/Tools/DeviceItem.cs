@@ -1,6 +1,6 @@
 ﻿using EVClassLib;
-using EVTechnology.Common.Helper;
-using EVTechnology.Common.Logging;
+using EVTechnology.Helper;
+using EVTechnology.Logging;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;

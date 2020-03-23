@@ -1,6 +1,6 @@
 ﻿using EVClassLib;
-using EVTechnology.Common.Helper;
-using EVTechnology.Common.Logging;
+using EVTechnology.Helper;
+using EVTechnology.Logging;
 using IronPython.Compiler.Ast;
 using SharkCompiler;
 using System;
@@ -177,6 +177,7 @@ namespace SharkSmart
 void UnitRegister()
 {
 " + code_unit + @"
+	ETH_Init();
 }
 ";
 				File.WriteAllText(output_path + "\\User\\Unit.c", code_unit_c);

@@ -1,4 +1,4 @@
-﻿using EVTechnology.Common.Logging;
+﻿using EVTechnology.Logging;
 using System;
 using System.Drawing;
 using System.Windows.Forms;

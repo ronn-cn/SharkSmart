@@ -311,6 +311,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Control.lib" />
     <None Include="Resources\SHARK.png" />
   </ItemGroup>
   <ItemGroup>

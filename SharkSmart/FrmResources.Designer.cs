@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResources));
             this.lvData = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.toolStripNoFrame1 = new EVTechnology.Common.Controls.ToolStripNoFrame();
+            this.toolStripNoFrame1 = new EVTechnology.Controls.ToolStripNoFrame();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.图片ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,7 +150,7 @@
 
         private System.Windows.Forms.ListView lvData;
         private System.Windows.Forms.ImageList imageList1;
-        private EVTechnology.Common.Controls.ToolStripNoFrame toolStripNoFrame1;
+        private EVTechnology.Controls.ToolStripNoFrame toolStripNoFrame1;
         private System.Windows.Forms.ToolStripButton tsbRefresh;
         private System.Windows.Forms.ToolStripButton tsbAdd;
         private System.Windows.Forms.ToolStripButton tsbDelete;

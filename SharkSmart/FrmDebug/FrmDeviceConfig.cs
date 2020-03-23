@@ -1,5 +1,5 @@
-﻿using EVTechnology.Common.Controls;
-using EVTechnology.Common.Helper;
+﻿using EVTechnology.Controls;
+using EVTechnology.Helper;
 using System;
 using System.Windows.Forms;
 

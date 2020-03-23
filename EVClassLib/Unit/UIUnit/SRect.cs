@@ -1,4 +1,4 @@
-﻿using EVTechnology.Common.Helper;
+﻿using EVTechnology.Helper;
 using System;
 using System.Drawing;
 
@@ -16,7 +16,7 @@ namespace EVClassLib
 
         public override string GetCode()
         {
-            string text = string.Format("EV_LCD_FillRectangle({0}, {1}, {2}, {3}, {4}, {5});\r", Location.X, Location.Y,
+            string text = string.Format("EV_LCD_FillRectangle({0}, {1}, {2}, {3}, 0x{4}, {5});\r", Location.X, Location.Y,
                 Size.Width + Location.X, Size.Height + Location.Y, DrawHelper.RGB32toRGB16(FillColor), 0);
             return text;
         }

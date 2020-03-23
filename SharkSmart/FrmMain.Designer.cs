@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            EVTechnology.Common.Controls.ItemColors itemColors1 = new EVTechnology.Common.Controls.ItemColors();
-            EVTechnology.Common.Controls.EVTabPage evTabPage1 = new EVTechnology.Common.Controls.EVTabPage();
+            EVTechnology.Controls.ItemColors itemColors1 = new EVTechnology.Controls.ItemColors();
+            EVTechnology.Controls.EVTabPage evTabPage1 = new EVTechnology.Controls.EVTabPage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tvExplorer = new System.Windows.Forms.TreeView();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
@@ -44,11 +44,11 @@
             this.tsmRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAddView = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStripNoFrame1 = new EVTechnology.Common.Controls.ToolStripNoFrame();
+            this.toolStripNoFrame1 = new EVTechnology.Controls.ToolStripNoFrame();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbMain = new EVTechnology.Common.Controls.EVTabControl();
+            this.tbMain = new EVTechnology.Controls.EVTabControl();
             this.btnDebug = new System.Windows.Forms.Button();
             this.btnCatalog = new System.Windows.Forms.Button();
             this.btnNewBulid = new System.Windows.Forms.Button();
@@ -423,7 +423,7 @@
         private System.Windows.Forms.Button btnProject;
         private System.Windows.Forms.Button btnNewBulid;
         private System.Windows.Forms.Button btnAbout;
-        private EVTechnology.Common.Controls.ToolStripNoFrame toolStripNoFrame1;
+        private EVTechnology.Controls.ToolStripNoFrame toolStripNoFrame1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton tsbRefresh;
         private System.Windows.Forms.ContextMenuStrip cmsTree;
@@ -435,6 +435,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmRename;
         private System.Windows.Forms.ToolStripMenuItem tsmAddView;
         private System.Windows.Forms.ToolStripMenuItem tsmDeleteMod;
-        private EVTechnology.Common.Controls.EVTabControl tbMain;
+        private EVTechnology.Controls.EVTabControl tbMain;
     }
 }

@@ -1,6 +1,6 @@
 ﻿using EVClassLib;
-using EVTechnology.Common.Controls;
-using EVTechnology.Common.Helper;
+using EVTechnology.Controls;
+using EVTechnology.Helper;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -296,9 +296,9 @@ namespace SharkSmart
         {
             if (ivComponent.SelectedItems.Count < 1)
                 return;
-            Module mod = Scene.GetModule(ivComponent.SelectedItems[0].Text);
+            Module mod = tmpModules.Find(p => p.Name == ivComponent.SelectedItems[0].Text);
             if (mod != null)
-                Scene.DeleteModule(mod);
+                tmpModules.Remove(mod);
             ivComponent.Items.Remove(ivComponent.SelectedItems[0]);
         }
 

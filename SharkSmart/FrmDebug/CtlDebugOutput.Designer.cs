@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.toolStripNoFrame1 = new EVTechnology.Common.Controls.ToolStripNoFrame();
+			this.toolStripNoFrame1 = new EVTechnology.Controls.ToolStripNoFrame();
 			this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
 			this.rtbConsole = new System.Windows.Forms.RichTextBox();
 			this.toolStripNoFrame1.SuspendLayout();
@@ -87,7 +87,7 @@
 
 		#endregion
 
-		private EVTechnology.Common.Controls.ToolStripNoFrame toolStripNoFrame1;
+		private EVTechnology.Controls.ToolStripNoFrame toolStripNoFrame1;
 		private System.Windows.Forms.ToolStripLabel toolStripLabel4;
 		private System.Windows.Forms.RichTextBox rtbConsole;
 	}

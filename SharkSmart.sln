@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVClassLib", "EVClassLib\EV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharkSmart", "SharkSmart\SharkSmart.csproj", "{8BA849E9-BB29-4834-A99C-9F554BC8F9ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VersionPostApp", "VersionPostApp\VersionPostApp.csproj", "{F62B74B5-4950-4C03-BA2F-4E2595CA2496}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{8BA849E9-BB29-4834-A99C-9F554BC8F9ED}.Release|x64.Build.0 = Release|Any CPU
 		{8BA849E9-BB29-4834-A99C-9F554BC8F9ED}.Release|x86.ActiveCfg = Release|Any CPU
 		{8BA849E9-BB29-4834-A99C-9F554BC8F9ED}.Release|x86.Build.0 = Release|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Debug|x64.Build.0 = Debug|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Debug|x86.Build.0 = Debug|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Release|x64.ActiveCfg = Release|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Release|x64.Build.0 = Release|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Release|x86.ActiveCfg = Release|Any CPU
+		{F62B74B5-4950-4C03-BA2F-4E2595CA2496}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

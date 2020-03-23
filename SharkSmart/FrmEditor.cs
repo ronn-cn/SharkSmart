@@ -18,21 +18,21 @@ namespace SharkSmart
                     content = File.ReadAllText(filePath).Replace("\n", "\\n").Replace("\r", "\\r");
                 ExecuteJavascript("setValue(\"" + content + "\")");
 
-                string modName = Path.GetFileName(Path.GetDirectoryName(Path.GetDirectoryName(filePath)));
+                //string modName = Path.GetFileName(Path.GetDirectoryName(Path.GetDirectoryName(filePath)));
 
-                string str = "";
+                //string str = "";
 
-                ExecModule mod = Engine.Project.GetModule(modName) as ExecModule;
-                UIUnit ut = mod.GetUIUnit();
-                if (ut != null)
-                {
-                    foreach (var page in ut.Pages)
-                    {
-                        foreach (var ctl in page.Controls)
-                            str += ctl.Name + "|";
-                    }
-                }
-                ExecuteJavascript("setTips(\"" + str + "\")");
+                //ExecModule mod = Engine.Project.GetModule(modName) as ExecModule;
+                //UIUnit ut = mod.GetUIUnit();
+                //if (ut != null)
+                //{
+                //    foreach (var page in ut.Pages)
+                //    {
+                //        foreach (var ctl in page.Controls)
+                //            str += ctl.Name + "|";
+                //    }
+                //}
+                //ExecuteJavascript("setTips(\"" + str + "\")");
             }
             get
             {
@@ -58,14 +58,11 @@ namespace SharkSmart
 
         private void FrmEditor_Load(object sender, EventArgs e)
         {
-            //LoadHandler.OnLoadEnd += LoadHandler_OnLoadEnd;
-            //FilePath = @"C:\Users\admin\Desktop\wechat.py";
 
         }
 
         private void LoadHandler_OnLoadEnd(object sender, Chromium.Event.CfxOnLoadEndEventArgs e)
         {
-
             if (e.Frame.IsMain)
             {
             }

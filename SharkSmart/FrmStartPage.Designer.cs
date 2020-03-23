@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            EVTechnology.Common.Controls.ItemColors itemColors3 = new EVTechnology.Common.Controls.ItemColors();
+            EVTechnology.Controls.ItemColors itemColors3 = new EVTechnology.Controls.ItemColors();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStartPage));
-            EVTechnology.Common.Controls.ItemColors itemColors4 = new EVTechnology.Common.Controls.ItemColors();
+            EVTechnology.Controls.ItemColors itemColors4 = new EVTechnology.Controls.ItemColors();
             this.label10 = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.ivProject = new EVTechnology.Common.Controls.EVIconView();
+            this.ivProject = new EVTechnology.Controls.EVIconView();
             this.imgProject = new System.Windows.Forms.ImageList(this.components);
             this.plA = new System.Windows.Forms.Panel();
             this.btnOpen = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.plC = new System.Windows.Forms.Panel();
-            this.tvPreview = new EVTechnology.Common.Controls.EVTreeView();
+            this.tvPreview = new EVTechnology.Controls.EVTreeView();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnPreTwo = new System.Windows.Forms.Button();
@@ -623,7 +623,7 @@
         #endregion
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnBrowse;
-        private EVTechnology.Common.Controls.EVIconView ivProject;
+        private EVTechnology.Controls.EVIconView ivProject;
         private System.Windows.Forms.Panel plA;
         private System.Windows.Forms.Panel plB;
         private System.Windows.Forms.Panel plC;
@@ -649,7 +649,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ImageList imgProject;
         private System.Windows.Forms.Button btnNextOne;
-        private EVTechnology.Common.Controls.EVTreeView tvPreview;
+        private EVTechnology.Controls.EVTreeView tvPreview;
         private System.Windows.Forms.ContextMenuStrip cmsMenu;
         private System.Windows.Forms.ToolStripMenuItem tsmRename;
         private System.Windows.Forms.ToolStripMenuItem tsmDeleteRecord;

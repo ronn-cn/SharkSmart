@@ -30,7 +30,7 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlDebugSerialPort));
-			this.toolStripNoFrame1 = new EVTechnology.Common.Controls.ToolStripNoFrame();
+			this.toolStripNoFrame1 = new EVTechnology.Controls.ToolStripNoFrame();
 			this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
 			this.tsbOpenCom = new System.Windows.Forms.ToolStripButton();
 			this.tscbBaudRate = new System.Windows.Forms.ToolStripComboBox();
@@ -156,7 +156,7 @@
 
 		#endregion
 
-		private EVTechnology.Common.Controls.ToolStripNoFrame toolStripNoFrame1;
+		private EVTechnology.Controls.ToolStripNoFrame toolStripNoFrame1;
 		private System.Windows.Forms.ToolStripLabel toolStripLabel4;
 		private System.Windows.Forms.RichTextBox rtbConsole;
 		private System.Windows.Forms.ToolStripButton tsbOpenCom;

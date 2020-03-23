@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlDebug));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.tsmTool = new EVTechnology.Common.Controls.ToolStripNoFrame();
+            this.tsmTool = new EVTechnology.Controls.ToolStripNoFrame();
             this.tslSpace = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -211,7 +211,7 @@
         #endregion
 		private System.Windows.Forms.Splitter splitter1;
 		private System.Windows.Forms.ImageList imageList1;
-        private EVTechnology.Common.Controls.ToolStripNoFrame tsmTool;
+        private EVTechnology.Controls.ToolStripNoFrame tsmTool;
         private System.Windows.Forms.ToolStripLabel tslSpace;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripButton tsbStart;

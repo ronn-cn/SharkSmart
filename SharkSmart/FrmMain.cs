@@ -1,6 +1,6 @@
 ﻿using EVClassLib;
-using EVTechnology.Common.Controls;
-using EVTechnology.Common.Logging;
+using EVTechnology.Controls;
+using EVTechnology.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

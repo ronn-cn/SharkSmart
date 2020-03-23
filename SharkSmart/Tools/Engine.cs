@@ -1,5 +1,5 @@
 ﻿using EVClassLib;
-using EVTechnology.Common.Logging;
+using EVTechnology.Logging;
 
 namespace SharkSmart
 {

@@ -141,7 +141,7 @@ namespace SharkSmart
 
         private void CtlDebugSerialPort_Load(object sender, EventArgs e)
         {
-            Engine.Logger.OutputStreamEvent += new EVTechnology.Common.Logging.OutputStreamHandler(LoggerOutputStream);
+            Engine.Logger.OutputStreamEvent += new EVTechnology.Logging.OutputStreamHandler(LoggerOutputStream);
             updateText += new UpdateText(UpdateTextRtbConsole);
         }
     }

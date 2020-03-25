@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <script src=".\vs\loader.js"></script>
+<script>
+    var editor;
+    var text;
+    require.config({ paths: { 'vs': './vs' }});
+    require(['vs/editor/editor.main'], function() {
+        editor = monaco.editor.create(document.getElementById('container'), {
+        value: '',
+        language: 'python',
+        //theme:'vs-dark',
+        automaticLayout: true,
+        // content_text : 12,
+        fontSize : '20px',
+        });
+
+        monaco.languages.registerCompletionItemProvider('python', {
+            provideCompletionItems: function(model, position) {
+            // find out if we are completing a property in the 'dependencies' object.
+                var textUntilPosition = model.getValueInRange({
+                    startLineNumber: 1, 
+                    startColumn: 1, 
+                    endLineNumber: position.lineNumber, 
+                    endColumn: position.column
+                    });
+                var suggestions = [];
+                var word = model.getWordUntilPosition(position);
+                var range = {
+                    startLineNumber: position.lineNumber,
+                    endLineNumber: position.lineNumber,
+                    startColumn: word.startColumn,
+                    endColumn: word.endColumn
+                };
+
+                if(textUntilPosition.charAt(textUntilPosition.length-2)=='.'){
+                    suggestions = createCtlFun();
+                    //suggestions = tips;
+                }
+                return {suggestions: suggestions};
+            }
+        });
+    });
+
+    function createCtlFun() {
+        return [
+		{
+			label: 'SetText', //显示的提示名称
+			insertText: 'SetText("text")' //选择后粘贴到编辑器中的文字
+		},
+        {
+			label: 'SetBkColor', //显示的提示名称
+			insertText: 'SetBkColor(0XFF00FF)' //选择后粘贴到编辑器中的文字
+		},
+        {
+			label: 'Click', //显示的提示名称
+			insertText: 'Click += Page_xxx_Click\ndef Page_xxx_Click():\n    pass' //选择后粘贴到编辑器中的文字
+		},
+        {
+			label: 'BUTTON', 
+			insertText: 'BUTTON'
+		},
+        {
+			label: 'TEXT', 
+			insertText: 'TEXT'
+		},
+        {
+			label: 'IMAGE', 
+			insertText: 'IMAGE'
+		},
+        {
+			label: 'BUTTON', 
+			insertText: 'BUTTON'
+		},
+        ]
+    }
+    function setValue(str)
+    {
+        editor.setValue(str)
+    }
+
+    document.addEventListener('keydown', function(e){
+        if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
+        {
+            e.preventDefault();
+            text = editor.getValue();
+            SaveFile(text);
+        }
+    });
+</script>
+</head>
+    <body overflow:hidden>
+    <div id="container" style="width:100%;height:98vh;border:0px"></div>
+    </body>
+</html>

@@ -50,6 +50,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>小鲨鱼.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EVTechnology">
       <HintPath>..\Dll\EVTechnology.dll</HintPath>
@@ -486,6 +489,7 @@
     <Content Include="bin\Debug\editor\vs\language\typescript\tsMode.js" />
     <Content Include="bin\Debug\editor\vs\language\typescript\tsWorker.js" />
     <Content Include="bin\Debug\editor\vs\loader.js" />
+    <Content Include="小鲨鱼.ico" />
     <None Include="Resources\open.png" />
     <None Include="Resources\code.png" />
     <None Include="Resources\data.png" />

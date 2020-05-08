@@ -25,6 +25,23 @@ namespace SharkSmart
 
         private string TmpPath = "";
 
+        [System.Runtime.InteropServices.DllImport("user32.dll ")]
+        public static extern int SetWindowLong(IntPtr hWnd, int nIndex, int wndproc);
+        [System.Runtime.InteropServices.DllImport("user32.dll ")]
+        public static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+        public const int GWL_STYLE = -16;
+        public const int WS_DISABLED = 0x8000000;
+
+        public static void SetControlEnabled(Control c, bool enabled)
+        {
+            if (enabled)
+            { SetWindowLong(c.Handle, GWL_STYLE, (~WS_DISABLED) & GetWindowLong(c.Handle, GWL_STYLE)); }
+            else
+            { SetWindowLong(c.Handle, GWL_STYLE, WS_DISABLED | GetWindowLong(c.Handle, GWL_STYLE)); }
+        }
+
+
         private void FrmStartStyle_Load(object sender, EventArgs e)
         {
             SetPaneEnable(plA);
@@ -108,7 +125,7 @@ namespace SharkSmart
                     li.Tag = reord.ProjectID;
                     li.Text = Path.GetFileNameWithoutExtension(reord.ProjectPath);
                     li.ToolTipText = reord.ProjectPath;
-                    li.ImageIndex = 0;
+                    li.ImageIndex = -1;
                     ivProject.Items.Add(li);
                     prcount++;
                 }
@@ -142,12 +159,13 @@ namespace SharkSmart
                 case "plA":
                     if (enable)
                     {
-                        pnl.Enabled = true;
+                        //pnl.Enabled = true;
+                        SetControlEnabled(pnl,true);
                         pnl.BackColor = Color.FromArgb(32, 45, 89);
                         tbProName.BackColor = Color.FromArgb(43, 59, 110);
                         tbPath.BackColor = Color.FromArgb(43, 59, 110);
                         btnOpen.BackColor = Color.FromArgb(64, 80, 141);
-                        btnNextOne.BackColor = Color.FromArgb(118, 164, 92);
+                        btnNextOne.BackColor = Color.FromArgb(15, 192, 98);
                     }
                     else
                     {
@@ -156,32 +174,36 @@ namespace SharkSmart
                         tbPath.BackColor = Color.FromArgb(58, 69, 105);
                         btnOpen.BackColor = Color.FromArgb(58, 69, 105);
                         btnNextOne.BackColor = Color.FromArgb(95, 121, 97);
-                        pnl.Enabled = false;
+                        //pnl.Enabled = false;
+                        SetControlEnabled(pnl, false);
                     }
                     break;
                 case "plB":
                     if (enable)
                     {
-                        pnl.Enabled = true;
+                        //pnl.Enabled = true;
+                        SetControlEnabled(pnl, true);
                         pnl.BackColor = Color.FromArgb(32, 45, 89);
                         btnPre.BackColor = Color.FromArgb(64, 80, 141);
-                        btnAdd.BackColor = Color.FromArgb(64, 80, 141);
+                        btnAdd.BackColor = Color.FromArgb(21, 79, 255);
                         cmbPreset.BackColor = Color.FromArgb(43, 59, 110);
                         tbName.BackColor = Color.FromArgb(43, 59, 110);
                         ivComponent.BackColor = Color.FromArgb(43, 59, 110);
-                        btnDelete.BackColor = Color.FromArgb(177, 68, 65);
-                        btnNextTwo.BackColor = Color.FromArgb(118, 164, 92);
+                        btnDelete.BackColor = Color.FromArgb(230, 70, 58);
+                        btnNextTwo.BackColor = Color.FromArgb(15, 192, 98);
                     }
                     else
                     {
                         pnl.BackColor = Color.FromArgb(53, 62, 95);
                         btnPre.BackColor = Color.FromArgb(58, 69, 105);
+                        btnAdd.BackColor = Color.FromArgb(64, 80, 141);
                         cmbPreset.BackColor = Color.FromArgb(58, 69, 105);
                         tbName.BackColor = Color.FromArgb(58, 69, 105);
                         ivComponent.BackColor = Color.FromArgb(58, 69, 105);
                         btnDelete.BackColor = Color.FromArgb(155, 87, 101);
                         btnNextTwo.BackColor = Color.FromArgb(95, 121, 97);
-                        pnl.Enabled = false;
+                        //pnl.Enabled = false;
+                        SetControlEnabled(pnl, false);
                     }
                     break;
                 case "plC":
@@ -191,7 +213,7 @@ namespace SharkSmart
                         pnl.BackColor = Color.FromArgb(32, 45, 89);
                         btnPreTwo.BackColor = Color.FromArgb(64, 80, 141);
                         tvPreview.BackColor = Color.FromArgb(43, 59, 110);
-                        btnCreate.BackColor = Color.FromArgb(118, 164, 92);
+                        btnCreate.BackColor = Color.FromArgb(15, 192, 98);
                     }
                     else
                     {
@@ -510,6 +532,14 @@ namespace SharkSmart
         {
             FrmModPreset frm = new FrmModPreset();
             frm.ShowDialog();
+        }
+
+        private void plB_EnabledChanged(object sender, EventArgs e)
+        {
+            if (cmbPreset.Enabled && string.IsNullOrEmpty(cmbPreset.Text))
+            {
+                cmbPreset.SelectedIndex = 0;
+            }
         }
     }
 

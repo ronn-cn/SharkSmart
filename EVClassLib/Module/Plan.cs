@@ -67,7 +67,8 @@ namespace EVClassLib
         {
             string text = @"#include ""GLOBAL.h""
 uint32_t*	TASK" + this.Name + @"_STK;
-void		Task" + this.Name + @"(void *p_arg);";
+void		Task" + this.Name + @"(void *p_arg);
+";
             if (Data != null)
             {
                 ClangFunctionImplementation imp = Data.FunctionImps.Find(p => p.Reference.Name == Data.Name + "_Init");
@@ -88,6 +89,9 @@ void		Task" + this.Name + @"(void *p_arg);";
                 ClangFunctionImplementation imp2 = Data.FunctionImps.Find(p => p.Reference.Name == Data.Name + "_Loop");
                 text += @"void Task" + this.Name + @"(void *p_arg)
 {
+    ";
+                text += imp.Reference.Name + "();";
+                text += @"
     while(1)
 	{
 		";

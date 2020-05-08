@@ -28,183 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlDebug));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.tsmTool = new EVTechnology.Controls.ToolStripNoFrame();
-            this.tslSpace = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cbCheck = new System.Windows.Forms.CheckBox();
-            this.tsbStart = new System.Windows.Forms.ToolStripButton();
-            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
-            this.tsbCompile = new System.Windows.Forms.ToolStripButton();
-            this.tsmTool.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "process.png");
-            this.imageList1.Images.SetKeyName(1, "electrical_sensor.png");
-            this.imageList1.Images.SetKeyName(2, "icon_公司信息维护.png");
-            this.imageList1.Images.SetKeyName(3, "self_service_kiosk.png");
-            this.imageList1.Images.SetKeyName(4, "candle_sticks.png");
-            this.imageList1.Images.SetKeyName(5, "services.png");
-            this.imageList1.Images.SetKeyName(6, "jurassic.png");
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 508);
-            this.splitter1.TabIndex = 9;
-            this.splitter1.TabStop = false;
-            // 
-            // tsmTool
-            // 
-            this.tsmTool.AutoSize = false;
-            this.tsmTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(49)))), ((int)(((byte)(82)))));
-            this.tsmTool.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tsmTool.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.tsmTool.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tsmTool.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlDebug));
+			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+			this.splitter1 = new System.Windows.Forms.Splitter();
+			this.tsmTool = new EVTechnology.Controls.ToolStripNoFrame();
+			this.tslSpace = new System.Windows.Forms.ToolStripLabel();
+			this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+			this.tsbStart = new System.Windows.Forms.ToolStripButton();
+			this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+			this.tsbCompile = new System.Windows.Forms.ToolStripButton();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.panel4 = new System.Windows.Forms.Panel();
+			this.cbCheck = new System.Windows.Forms.CheckBox();
+			this.tsmTool.SuspendLayout();
+			this.panel3.SuspendLayout();
+			this.panel4.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// imageList1
+			// 
+			this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+			this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageList1.Images.SetKeyName(0, "process.png");
+			this.imageList1.Images.SetKeyName(1, "electrical_sensor.png");
+			this.imageList1.Images.SetKeyName(2, "icon_公司信息维护.png");
+			this.imageList1.Images.SetKeyName(3, "self_service_kiosk.png");
+			this.imageList1.Images.SetKeyName(4, "candle_sticks.png");
+			this.imageList1.Images.SetKeyName(5, "services.png");
+			this.imageList1.Images.SetKeyName(6, "jurassic.png");
+			// 
+			// splitter1
+			// 
+			this.splitter1.Location = new System.Drawing.Point(0, 0);
+			this.splitter1.Margin = new System.Windows.Forms.Padding(4);
+			this.splitter1.Name = "splitter1";
+			this.splitter1.Size = new System.Drawing.Size(4, 508);
+			this.splitter1.TabIndex = 9;
+			this.splitter1.TabStop = false;
+			// 
+			// tsmTool
+			// 
+			this.tsmTool.AutoSize = false;
+			this.tsmTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(49)))), ((int)(((byte)(82)))));
+			this.tsmTool.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tsmTool.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+			this.tsmTool.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+			this.tsmTool.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslSpace,
             this.toolStripLabel4,
             this.tsbStart,
             this.tsbRefresh,
             this.tsbCompile});
-            this.tsmTool.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.tsmTool.Location = new System.Drawing.Point(40, 0);
-            this.tsmTool.Name = "tsmTool";
-            this.tsmTool.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.tsmTool.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tsmTool.Size = new System.Drawing.Size(803, 75);
-            this.tsmTool.TabIndex = 26;
-            this.tsmTool.Text = "toolStripNoFrame3";
-            // 
-            // tslSpace
-            // 
-            this.tslSpace.AutoSize = false;
-            this.tslSpace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
-            this.tslSpace.Name = "tslSpace";
-            this.tslSpace.Size = new System.Drawing.Size(30, 22);
-            this.tslSpace.Text = "                      ";
-            // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(0, 72);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(843, 433);
-            this.panel1.TabIndex = 28;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 508);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 190);
-            this.panel2.TabIndex = 29;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tsmTool);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(4, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(843, 75);
-            this.panel3.TabIndex = 30;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.cbCheck);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 75);
-            this.panel4.TabIndex = 27;
-            // 
-            // cbCheck
-            // 
-            this.cbCheck.AutoSize = true;
-            this.cbCheck.Location = new System.Drawing.Point(13, 32);
-            this.cbCheck.Name = "cbCheck";
-            this.cbCheck.Size = new System.Drawing.Size(15, 14);
-            this.cbCheck.TabIndex = 0;
-            this.cbCheck.UseVisualStyleBackColor = true;
-            this.cbCheck.CheckedChanged += new System.EventHandler(this.CbCheck_CheckedChanged);
-            // 
-            // tsbStart
-            // 
-            this.tsbStart.AutoSize = false;
-            this.tsbStart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbStart.Image = global::SharkSmart.Properties.Resources.play__2_;
-            this.tsbStart.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbStart.Name = "tsbStart";
-            this.tsbStart.Size = new System.Drawing.Size(50, 50);
-            this.tsbStart.Text = "一键烧录";
-            this.tsbStart.Click += new System.EventHandler(this.TsbStart_Click);
-            // 
-            // tsbRefresh
-            // 
-            this.tsbRefresh.AutoSize = false;
-            this.tsbRefresh.BackgroundImage = global::SharkSmart.Properties.Resources.cached;
-            this.tsbRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(50, 50);
-            this.tsbRefresh.Text = "刷新设备列表";
-            this.tsbRefresh.Click += new System.EventHandler(this.TsbRefresh_Click);
-            // 
-            // tsbCompile
-            // 
-            this.tsbCompile.AutoSize = false;
-            this.tsbCompile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbCompile.ForeColor = System.Drawing.Color.White;
-            this.tsbCompile.Image = global::SharkSmart.Properties.Resources.code;
-            this.tsbCompile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCompile.Name = "tsbCompile";
-            this.tsbCompile.Size = new System.Drawing.Size(50, 50);
-            this.tsbCompile.Text = "编译";
-            this.tsbCompile.Click += new System.EventHandler(this.TsbCompile_Click);
-            // 
-            // CtlDebug
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(49)))), ((int)(((byte)(82)))));
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.panel2);
-            this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "CtlDebug";
-            this.Size = new System.Drawing.Size(847, 698);
-            this.Load += new System.EventHandler(this.CtlDebug_Load);
-            this.tsmTool.ResumeLayout(false);
-            this.tsmTool.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.ResumeLayout(false);
+			this.tsmTool.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+			this.tsmTool.Location = new System.Drawing.Point(40, 0);
+			this.tsmTool.Name = "tsmTool";
+			this.tsmTool.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+			this.tsmTool.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+			this.tsmTool.Size = new System.Drawing.Size(803, 75);
+			this.tsmTool.TabIndex = 26;
+			this.tsmTool.Text = "toolStripNoFrame3";
+			// 
+			// tslSpace
+			// 
+			this.tslSpace.AutoSize = false;
+			this.tslSpace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
+			this.tslSpace.Name = "tslSpace";
+			this.tslSpace.Size = new System.Drawing.Size(30, 22);
+			this.tslSpace.Text = "                      ";
+			// 
+			// toolStripLabel4
+			// 
+			this.toolStripLabel4.Name = "toolStripLabel4";
+			this.toolStripLabel4.Size = new System.Drawing.Size(0, 72);
+			// 
+			// tsbStart
+			// 
+			this.tsbStart.AutoSize = false;
+			this.tsbStart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.tsbStart.Image = global::SharkSmart.Properties.Resources.play__2_;
+			this.tsbStart.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsbStart.Name = "tsbStart";
+			this.tsbStart.Size = new System.Drawing.Size(50, 50);
+			this.tsbStart.Text = "一键烧录";
+			this.tsbStart.Click += new System.EventHandler(this.TsbStart_Click);
+			// 
+			// tsbRefresh
+			// 
+			this.tsbRefresh.AutoSize = false;
+			this.tsbRefresh.BackgroundImage = global::SharkSmart.Properties.Resources.cached;
+			this.tsbRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsbRefresh.Name = "tsbRefresh";
+			this.tsbRefresh.Size = new System.Drawing.Size(50, 50);
+			this.tsbRefresh.Text = "刷新设备列表";
+			this.tsbRefresh.Click += new System.EventHandler(this.TsbRefresh_Click);
+			// 
+			// tsbCompile
+			// 
+			this.tsbCompile.AutoSize = false;
+			this.tsbCompile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.tsbCompile.ForeColor = System.Drawing.Color.White;
+			this.tsbCompile.Image = global::SharkSmart.Properties.Resources.code;
+			this.tsbCompile.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsbCompile.Name = "tsbCompile";
+			this.tsbCompile.Size = new System.Drawing.Size(50, 50);
+			this.tsbCompile.Text = "编译";
+			this.tsbCompile.Click += new System.EventHandler(this.TsbCompile_Click);
+			// 
+			// panel1
+			// 
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(4, 75);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(843, 433);
+			this.panel1.TabIndex = 28;
+			// 
+			// panel2
+			// 
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panel2.Location = new System.Drawing.Point(0, 508);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(847, 190);
+			this.panel2.TabIndex = 29;
+			// 
+			// panel3
+			// 
+			this.panel3.Controls.Add(this.tsmTool);
+			this.panel3.Controls.Add(this.panel4);
+			this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel3.Location = new System.Drawing.Point(4, 0);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(843, 75);
+			this.panel3.TabIndex = 30;
+			// 
+			// panel4
+			// 
+			this.panel4.Controls.Add(this.cbCheck);
+			this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel4.Location = new System.Drawing.Point(0, 0);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(40, 75);
+			this.panel4.TabIndex = 27;
+			// 
+			// cbCheck
+			// 
+			this.cbCheck.AutoSize = true;
+			this.cbCheck.Location = new System.Drawing.Point(13, 32);
+			this.cbCheck.Name = "cbCheck";
+			this.cbCheck.Size = new System.Drawing.Size(15, 14);
+			this.cbCheck.TabIndex = 0;
+			this.cbCheck.UseVisualStyleBackColor = true;
+			this.cbCheck.CheckedChanged += new System.EventHandler(this.CbCheck_CheckedChanged);
+			// 
+			// CtlDebug
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(49)))), ((int)(((byte)(82)))));
+			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.panel3);
+			this.Controls.Add(this.splitter1);
+			this.Controls.Add(this.panel2);
+			this.DoubleBuffered = true;
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+			this.Margin = new System.Windows.Forms.Padding(4);
+			this.Name = "CtlDebug";
+			this.Size = new System.Drawing.Size(847, 698);
+			this.Load += new System.EventHandler(this.CtlDebug_Load);
+			this.tsmTool.ResumeLayout(false);
+			this.tsmTool.PerformLayout();
+			this.panel3.ResumeLayout(false);
+			this.panel4.ResumeLayout(false);
+			this.panel4.PerformLayout();
+			this.ResumeLayout(false);
 
         }
 

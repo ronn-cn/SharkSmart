@@ -64,6 +64,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dll\IronPython.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Desktop\NETProj\SharkSmart08\Dll\Microsoft.Scripting.dll</HintPath>
+    </Reference>
     <Reference Include="MouseKeyboardActivityMonitor">
       <HintPath>..\Dll\MouseKeyboardActivityMonitor.dll</HintPath>
     </Reference>

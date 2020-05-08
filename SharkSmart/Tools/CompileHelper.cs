@@ -3,6 +3,7 @@ using EVTechnology.Helper;
 using EVTechnology.Logging;
 using IronPython.Compiler.Ast;
 using SharkCompiler;
+using Microsoft.Scripting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -191,7 +192,7 @@ void UnitRegister()
 
 					File.WriteAllText(output_path + "\\User\\" + plan.Name + ".c", plancode);
 					code_global_user += plan.TransformToClang_forH();
-					code_task += plan.Name + "_Init();\r\n";
+					code_task += plan.Name + "_Start();\r\n";
 
 					SetProgressValue(index++ * 20 / fileCount);
 				}
@@ -229,12 +230,14 @@ void TaskRegister()
 			{
 				Console.WriteLine(ex.Message);
 				this.Logger.Error("{0}-{1}", "PythonToC", ex.Message);
+				this.IsRunning = false;
 			}
 
 			//2.C -> bin
 			if (!IsRunning)
 			{
 				this.Logger?.Wran("{0}-{1}", "中断", "编译任务已中断!");
+				SetProgressValue(100);
 				return;
 			}
 			cts = new CancellationTokenSource();
@@ -253,6 +256,7 @@ void TaskRegister()
 				if (cts.Token.IsCancellationRequested)//如果检测到取消请求
 				{
 					this.Logger?.Wran("{0}-{1}", "GCC编译", "任务被终止！");
+					SetProgressValue(100);
 				}
 				pMake.CancelOutputRead();
 				pMake.CancelErrorRead();
@@ -290,6 +294,7 @@ void TaskRegister()
 				else
 				{
 					this.Logger.Error("{0}-{1}", "GCC编译", "编译生成失败！");
+					SetProgressValue(100);
 				}
 				IsRunning = false;
 			}, cts.Token);

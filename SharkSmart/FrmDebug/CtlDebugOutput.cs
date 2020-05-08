@@ -17,6 +17,15 @@ namespace SharkSmart
 
         public CtlDebugOutput(Logger logger) : this()
         {
+            SetLogger(logger);
+        }
+
+        /// <summary>
+        /// 设置日志管家
+        /// </summary>
+        /// <param name="logger"></param>
+        public void SetLogger(Logger logger)
+        {
             this.Logger = logger;
             this.Logger.OutputStreamEvent += new OutputStreamHandler(LoggerOutputStream);
         }

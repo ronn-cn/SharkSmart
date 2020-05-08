@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using EVTechnology.Logging;
+using System.Threading.Tasks;
 
 namespace SharkSmart
 {
@@ -9,6 +11,7 @@ namespace SharkSmart
     {
         private readonly DeviceManager devicemanager;
         private List<DeviceItem> items = new List<DeviceItem>();
+        private CtlDebugOutput output;
 
         //开一个任务刷新界面，实时显示当前的设备列表
         public CtlDebug()
@@ -16,6 +19,7 @@ namespace SharkSmart
             InitializeComponent();
             devicemanager = new DeviceManager();
             devicemanager.CheckoutDeviceEvent += Devicemanager_CheckoutDeviceEvent;
+            this.output = new CtlDebugOutput();
         }
 
         private void Devicemanager_CheckoutDeviceEvent(object sender, EventArgs e)
@@ -134,13 +138,23 @@ namespace SharkSmart
             //编译不烧录
             CompileHelper compiler = new CompileHelper();
             compiler.Logger = new EVTechnology.Logging.Logger();
+            this.output.SetLogger(compiler.Logger);
 
-            List<ExecModule> mods = Engine.Project.GetAllModule();
-            foreach (var mod in mods)
+            if (this.panel2 != null)
             {
-                compiler.SelectedModule = mod;
-                compiler.Compile();
+                this.output.Dock = DockStyle.Fill;
+                this.panel2.Controls.Clear();
+                this.panel2.Controls.Add(this.output);
             }
+            Task.Run(() =>
+            {
+                List<ExecModule> mods = Engine.Project.GetAllModule();
+                foreach (var mod in mods)
+                {
+                    compiler.SelectedModule = mod;
+                    compiler.Compile();
+                }
+            });
         }
     }
 }

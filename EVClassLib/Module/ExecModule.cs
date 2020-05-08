@@ -87,6 +87,9 @@ namespace EVClassLib
             Plans.Add(plan);
             string defaultPlanCode = @"def Init():
     pass
+
+def Loop():
+    pass
 ";
             File.WriteAllText(GetFilePath(2, plan.Name), defaultPlanCode);
             Save();
